@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -92,7 +93,7 @@
         .upload-area input[type=file]{display:none}
     </style>
 </head>
-<body class="bg-cream text-charcoal-900 font-sans antialiased selection:bg-brand-200 selection:text-brand-900">
+<body class="bg-cream text-charcoal-900 dark:bg-[#0f0d0b] dark:text-cream font-sans antialiased selection:bg-brand-200 selection:text-brand-900 dark:selection:bg-brand-800 dark:selection:text-brand-200">
 
 <!-- Top Announcement Bar -->
 <div class="bg-charcoal-900 text-brand-100 text-xs py-2 px-4 text-center tracking-widest uppercase border-b border-brand-500/20">
@@ -101,77 +102,77 @@
 </div>
 
 <!-- Navigation Bar -->
-<header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-brand-200/50 transition-all duration-300">
+<header class="sticky top-0 z-40 bg-cream/90 dark:bg-[#0f0d0b]/90 backdrop-blur-md border-b border-brand-200/50 dark:border-brand-500/20 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <a href="#" class="flex flex-col items-start group">
-            <span class="cursive-title text-3xl sm:text-4xl text-brand-600 group-hover:text-brand-500 transition-colors leading-none">ThePrettyArts</span>
-            <span class="text-[10px] tracking-[0.3em] uppercase text-charcoal-800 font-medium pl-1">by Preeti Kumari</span>
+            <span class="cursive-title text-3xl sm:text-4xl text-brand-600 dark:text-brand-400 group-hover:text-brand-500 dark:group-hover:text-brand-300 transition-colors leading-none">ThePrettyArts</span>
+            <span class="text-[10px] tracking-[0.3em] uppercase text-charcoal-800 dark:text-gray-400 font-medium pl-1">by Preeti Kumari</span>
         </a>
-        <nav class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium text-charcoal-800">
-            <a href="#gallery" class="hover:text-brand-600 transition-colors">Gallery</a>
-            <a href="#room-visualizer" class="hover:text-brand-600 transition-colors">Room Visualizer</a>
-            <a href="#about" class="hover:text-brand-600 transition-colors">About Preeti</a>
-            <a href="#commissions" class="hover:text-brand-600 transition-colors">Custom Order</a>
-            <a href="#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
+        <nav class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium text-charcoal-800 dark:text-gray-300">
+            <a href="#gallery" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Gallery</a>
+            <a href="#room-visualizer" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Room Visualizer</a>
+            <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About Preeti</a>
+            <a href="#commissions" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Custom Order</a>
+            <a href="#faq" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">FAQ</a>
         </nav>
         <div class="flex items-center space-x-3">
-            <a href="https://wa.me/919876543210?text=Hello%20Preeti!%20I%20am%20visiting%20theprettyarts.com%20and%20would%20like%20to%20inquire%20about%20your%20paintings." target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+            <a href="https://wa.me/919876543210?text=Hello%20Preeti!%20I%20am%20visiting%20theprettyarts.com%20and%20would%20like%20to%20inquire%20about%20your%20paintings." target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
                 <i class="fa-brands fa-whatsapp text-lg"></i>
                 <span class="hidden sm:inline">Direct Chat</span>
             </a>
-            <button id="mobile-menu-btn" class="md:hidden p-2 text-charcoal-800 hover:text-brand-600 focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 focus:outline-none">
                 <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-cream border-b border-brand-200 px-6 py-4 space-y-3">
-        <a href="#gallery" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 hover:text-brand-600">Gallery</a>
-        <a href="#room-visualizer" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 hover:text-brand-600">Room Visualizer</a>
-        <a href="#about" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 hover:text-brand-600">About Preeti</a>
-        <a href="#commissions" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 hover:text-brand-600">Custom Order</a>
-        <a href="#faq" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 hover:text-brand-600">FAQ</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-cream dark:bg-[#1a1714] border-b border-brand-200 dark:border-brand-500/20 px-6 py-4 space-y-3">
+        <a href="#gallery" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">Gallery</a>
+        <a href="#room-visualizer" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">Room Visualizer</a>
+        <a href="#about" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">About Preeti</a>
+        <a href="#commissions" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">Custom Order</a>
+        <a href="#faq" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">FAQ</a>
     </div>
 </header>
 
 <!-- Hero Section -->
-<section class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-brand-50/80 via-cream to-cream">
+<section class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-brand-50/80 via-cream to-cream dark:from-[#110e0c] dark:via-[#0f0d0b] dark:to-[#0f0d0b]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
-                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold tracking-widest uppercase border border-brand-300/50">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-800 dark:text-brand-300 text-xs font-semibold tracking-widest uppercase border border-brand-300/50 dark:border-brand-500/30">
                     <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
                     <span>Original Fine Art Studio</span>
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-charcoal-900 leading-tight">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-charcoal-900 dark:text-cream leading-tight">
                     <span id="hero-h1-line1">Transforming Canvas into</span>
-                    <span id="hero-h1-cursive" class="cursive-title text-brand-600 text-5xl sm:text-6xl lg:text-7xl font-normal block mt-1">Timeless Emotion</span>
+                    <span id="hero-h1-cursive" class="cursive-title text-brand-600 dark:text-brand-400 text-5xl sm:text-6xl lg:text-7xl font-normal block mt-1">Timeless Emotion</span>
                 </h1>
-                <p class="font-editorial text-xl sm:text-2xl text-charcoal-800 leading-relaxed italic">"Every brushstroke carries a quiet whisper of elegance. Bring home original artwork crafted to elevate your living sanctuary."</p>
-                <p class="text-sm sm:text-base text-gray-600 max-w-xl mx-auto lg:mx-0">Welcome to <strong>ThePrettyArts</strong> by artist <strong>Preeti Kumari</strong>. Discover hand-painted masterpieces available as instant ultra-high-resolution <strong>Digital Downloads</strong> or ready-to-hang <strong>Museum-Grade Framed Prints</strong>.</p>
+                <p class="font-editorial text-xl sm:text-2xl text-charcoal-800 dark:text-gray-300 leading-relaxed italic">"Every brushstroke carries a quiet whisper of elegance. Bring home original artwork crafted to elevate your living sanctuary."</p>
+                <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mx-auto lg:mx-0">Welcome to <strong>ThePrettyArts</strong> by artist <strong>Preeti Kumari</strong>. Discover hand-painted masterpieces available as instant ultra-high-resolution <strong>Digital Downloads</strong> or ready-to-hang <strong>Museum-Grade Framed Prints</strong>.</p>
                 <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                    <a href="#gallery" class="w-full sm:w-auto bg-charcoal-900 hover:bg-brand-700 text-cream font-medium px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all text-sm tracking-widest uppercase text-center">Explore Gallery</a>
-                    <a href="https://wa.me/919876543210?text=Hello%20Preeti!%20I%20would%20like%20to%20discuss%20a%20custom%20painting%20commission." target="_blank" class="w-full sm:w-auto border border-brand-500 text-brand-800 hover:bg-brand-100 font-medium px-8 py-3.5 rounded-full transition-all text-sm tracking-widest uppercase text-center inline-flex items-center justify-center space-x-2">
-                        <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i><span>Commission Art</span>
+                    <a href="#gallery" class="w-full sm:w-auto bg-charcoal-900 dark:bg-brand-600 hover:bg-brand-700 dark:hover:bg-brand-500 text-cream font-medium px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all text-sm tracking-widest uppercase text-center">Explore Gallery</a>
+                    <a href="https://wa.me/919876543210?text=Hello%20Preeti!%20I%20would%20like%20to%20discuss%20a%20custom%20painting%20commission." target="_blank" class="w-full sm:w-auto border border-brand-500 text-brand-800 dark:text-brand-300 hover:bg-brand-100 dark:hover:bg-brand-900/30 font-medium px-8 py-3.5 rounded-full transition-all text-sm tracking-widest uppercase text-center inline-flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-600 dark:text-emerald-500 text-lg"></i><span>Commission Art</span>
                     </a>
                 </div>
-                <div class="pt-6 border-t border-brand-200/60 grid grid-cols-3 gap-4 text-center lg:text-left">
-                    <div><p class="text-xs uppercase text-gray-500 font-medium">Digital Copy</p><p class="text-sm sm:text-base font-serif font-bold text-brand-800">300 DPI Ultra High-Res</p></div>
-                    <div><p class="text-xs uppercase text-gray-500 font-medium">Framed Prints</p><p class="text-sm sm:text-base font-serif font-bold text-brand-800">Archival Canvas &amp; Frame</p></div>
-                    <div><p class="text-xs uppercase text-gray-500 font-medium">Direct Contact</p><p class="text-sm sm:text-base font-serif font-bold text-brand-800">Chat with Artist</p></div>
+                <div class="pt-6 border-t border-brand-200/60 dark:border-brand-500/20 grid grid-cols-3 gap-4 text-center lg:text-left">
+                    <div><p class="text-xs uppercase text-gray-500 dark:text-gray-400 font-medium">Digital Copy</p><p class="text-sm sm:text-base font-serif font-bold text-brand-800 dark:text-brand-300">300 DPI Ultra High-Res</p></div>
+                    <div><p class="text-xs uppercase text-gray-500 dark:text-gray-400 font-medium">Framed Prints</p><p class="text-sm sm:text-base font-serif font-bold text-brand-800 dark:text-brand-300">Archival Canvas &amp; Frame</p></div>
+                    <div><p class="text-xs uppercase text-gray-500 dark:text-gray-400 font-medium">Direct Contact</p><p class="text-sm sm:text-base font-serif font-bold text-brand-800 dark:text-brand-300">Chat with Artist</p></div>
                 </div>
             </div>
             <div class="lg:col-span-6 relative flex justify-center">
                 <div class="relative w-full max-w-md lg:max-w-none">
-                    <div class="absolute -inset-2 bg-gradient-to-tr from-brand-300 via-brand-100 to-amber-200 rounded-3xl blur-2xl opacity-60"></div>
-                    <div class="relative bg-white p-4 sm:p-6 rounded-2xl shadow-2xl border border-brand-200/80">
-                        <div class="relative aspect-[4/5] rounded-lg overflow-hidden frame-shadow bg-gray-100 group">
+                    <div class="absolute -inset-2 bg-gradient-to-tr from-brand-300 via-brand-100 to-amber-200 dark:from-brand-600/30 dark:via-brand-900/20 dark:to-transparent rounded-3xl blur-2xl opacity-60"></div>
+                    <div class="relative bg-white dark:bg-[#1a1714] p-4 sm:p-6 rounded-2xl shadow-2xl border border-brand-200/80 dark:border-brand-500/20">
+                        <div class="relative aspect-[4/5] rounded-lg overflow-hidden frame-shadow bg-gray-100 dark:bg-[#0f0d0b] group">
                             <img id="hero-art-img" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80" alt="Featured Fine Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            <div class="absolute bottom-3 left-3 right-3 bg-cream/90 backdrop-blur-md p-3 rounded-lg border border-white/60 shadow-md">
-                                <p id="hero-artwork-title" class="cursive-title text-2xl text-brand-700 leading-none">Whispers of Gold</p>
-                                <p id="hero-artwork-subtitle" class="text-xs text-charcoal-800 font-medium">Original Acrylic &amp; Gold Leaf on Textured Canvas</p>
+                            <div class="absolute bottom-3 left-3 right-3 bg-cream/90 dark:bg-[#1a1714]/90 backdrop-blur-md p-3 rounded-lg border border-white/60 dark:border-brand-500/30 shadow-md">
+                                <p id="hero-artwork-title" class="cursive-title text-2xl text-brand-700 dark:text-brand-400 leading-none">Whispers of Gold</p>
+                                <p id="hero-artwork-subtitle" class="text-xs text-charcoal-800 dark:text-gray-300 font-medium">Original Acrylic &amp; Gold Leaf on Textured Canvas</p>
                             </div>
                         </div>
-                        <div class="absolute -top-4 -right-4 bg-charcoal-900 text-cream py-2 px-4 rounded-full shadow-lg border border-brand-400 text-xs font-serif tracking-widest uppercase flex items-center space-x-1">
+                        <div class="absolute -top-4 -right-4 bg-charcoal-900 dark:bg-[#0f0d0b] text-cream py-2 px-4 rounded-full shadow-lg border border-brand-400 dark:border-brand-500/50 text-xs font-serif tracking-widest uppercase flex items-center space-x-1">
                             <i class="fa-solid fa-crown text-brand-400 mr-1"></i><span>Featured Masterpiece</span>
                         </div>
                     </div>
@@ -182,7 +183,7 @@
 </section>
 
 <!-- Two Purchase Modes Banner -->
-<section class="py-12 bg-brand-900 text-cream border-y border-brand-700">
+<section class="py-12 bg-brand-900 dark:bg-black text-cream border-y border-brand-700 dark:border-brand-900/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-10">
             <span class="cursive-title text-3xl text-brand-300">How You Can Collect</span>
@@ -190,7 +191,7 @@
             <div class="w-16 h-0.5 bg-brand-400 mx-auto mt-3"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            <div class="bg-charcoal-800 p-8 rounded-2xl border border-brand-500/30 flex flex-col justify-between hover:border-brand-400 transition-all">
+            <div class="bg-charcoal-800 dark:bg-[#1a1714] p-8 rounded-2xl border border-brand-500/30 dark:border-brand-500/20 flex flex-col justify-between hover:border-brand-400 dark:hover:border-brand-500/50 transition-all">
                 <div>
                     <div class="w-12 h-12 rounded-full bg-brand-500/20 text-brand-300 flex items-center justify-center text-xl mb-4 border border-brand-500/40"><i class="fa-solid fa-file-arrow-down"></i></div>
                     <h3 class="text-xl font-serif text-white mb-2">1. High-Resolution Digital Copy</h3>
@@ -201,9 +202,9 @@
                         <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Cost-effective &amp; global availability</li>
                     </ul>
                 </div>
-                <div class="text-xs text-brand-300 uppercase tracking-widest font-semibold pt-4 border-t border-gray-700">Inquire Price via WhatsApp</div>
+                <div class="text-xs text-brand-300 uppercase tracking-widest font-semibold pt-4 border-t border-gray-700 dark:border-brand-500/10">Inquire Price via WhatsApp</div>
             </div>
-            <div class="bg-charcoal-800 p-8 rounded-2xl border border-brand-500/30 flex flex-col justify-between hover:border-brand-400 transition-all">
+            <div class="bg-charcoal-800 dark:bg-[#1a1714] p-8 rounded-2xl border border-brand-500/30 dark:border-brand-500/20 flex flex-col justify-between hover:border-brand-400 dark:hover:border-brand-500/50 transition-all">
                 <div>
                     <div class="w-12 h-12 rounded-full bg-brand-500/20 text-brand-300 flex items-center justify-center text-xl mb-4 border border-brand-500/40"><i class="fa-solid fa-frame"></i></div>
                     <h3 class="text-xl font-serif text-white mb-2">2. Museum-Grade Framed Print</h3>
@@ -214,7 +215,7 @@
                         <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Premium protective bubble packaging</li>
                     </ul>
                 </div>
-                <div class="text-xs text-brand-300 uppercase tracking-widest font-semibold pt-4 border-t border-gray-700">Doorstep Delivery Available</div>
+                <div class="text-xs text-brand-300 uppercase tracking-widest font-semibold pt-4 border-t border-gray-700 dark:border-brand-500/10">Doorstep Delivery Available</div>
             </div>
         </div>
     </div>
@@ -223,39 +224,39 @@
 <!-- Gallery Section -->
 <section id="gallery" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="cursive-title text-4xl text-brand-600">The Art Collection</span>
-        <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 mt-1">Explore Preeti's Artworks</h2>
-        <p class="text-gray-600 text-sm mt-3">Select any painting to view specifications, frame styling, and directly place an order request on WhatsApp.</p>
+        <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">The Art Collection</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-cream mt-1">Explore Preeti's Artworks</h2>
+        <p class="text-gray-600 dark:text-gray-400 text-sm mt-3">Select any painting to view specifications, frame styling, and directly place an order request on WhatsApp.</p>
         <div class="w-12 h-0.5 bg-brand-500 mx-auto mt-4"></div>
     </div>
     <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-12" id="filter-buttons">
-        <div class="text-gray-400 text-sm animate-pulse">Loading categories...</div>
+        <div class="text-gray-400 dark:text-gray-500 text-sm animate-pulse">Loading categories...</div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
-        <div class="bg-white rounded-2xl overflow-hidden border border-brand-200/60 shadow-md animate-pulse"><div class="aspect-[4/5] bg-gray-200"></div><div class="p-5 space-y-3"><div class="h-4 bg-gray-200 rounded w-3/4"></div><div class="h-3 bg-gray-100 rounded w-1/2"></div></div></div>
-        <div class="bg-white rounded-2xl overflow-hidden border border-brand-200/60 shadow-md animate-pulse hidden sm:block"><div class="aspect-[4/5] bg-gray-200"></div><div class="p-5 space-y-3"><div class="h-4 bg-gray-200 rounded w-3/4"></div><div class="h-3 bg-gray-100 rounded w-1/2"></div></div></div>
-        <div class="bg-white rounded-2xl overflow-hidden border border-brand-200/60 shadow-md animate-pulse hidden lg:block"><div class="aspect-[4/5] bg-gray-200"></div><div class="p-5 space-y-3"><div class="h-4 bg-gray-200 rounded w-3/4"></div><div class="h-3 bg-gray-100 rounded w-1/2"></div></div></div>
+        <div class="bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md animate-pulse"><div class="aspect-[4/5] bg-gray-200 dark:bg-gray-800"></div><div class="p-5 space-y-3"><div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div><div class="h-3 bg-gray-100 dark:bg-gray-800 rounded w-1/2"></div></div></div>
+        <div class="bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md animate-pulse hidden sm:block"><div class="aspect-[4/5] bg-gray-200 dark:bg-gray-800"></div><div class="p-5 space-y-3"><div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div><div class="h-3 bg-gray-100 dark:bg-gray-800 rounded w-1/2"></div></div></div>
+        <div class="bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md animate-pulse hidden lg:block"><div class="aspect-[4/5] bg-gray-200 dark:bg-gray-800"></div><div class="p-5 space-y-3"><div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div><div class="h-3 bg-gray-100 dark:bg-gray-800 rounded w-1/2"></div></div></div>
     </div>
 </section>
 
 <!-- Room Visualizer Section -->
-<section id="room-visualizer" class="py-20 bg-charcoal-900 text-cream relative overflow-hidden">
+<section id="room-visualizer" class="py-20 bg-charcoal-900 dark:bg-black text-cream relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-5 space-y-6">
-                <span class="cursive-title text-4xl text-brand-300">Virtual Wall Studio</span>
+                <span class="cursive-title text-4xl text-brand-300 dark:text-brand-400">Virtual Wall Studio</span>
                 <h2 class="text-3xl sm:text-4xl font-serif leading-tight">See It On Your Wall</h2>
-                <p class="text-gray-300 text-sm leading-relaxed">Visualize how Preeti Kumari's paintings fit seamlessly into your modern luxury home. Select an artwork and toggle frame styles to experience scale and color harmony.</p>
+                <p class="text-gray-300 dark:text-gray-400 text-sm leading-relaxed">Visualize how Preeti Kumari's paintings fit seamlessly into your modern luxury home. Select an artwork and toggle frame styles to experience scale and color harmony.</p>
                 <div class="space-y-2">
-                    <label class="text-xs uppercase tracking-widest text-brand-300 font-medium">Select Artwork:</label>
-                    <select id="viz-art-select" onchange="updateRoomVisualizer()" class="w-full bg-charcoal-800 border border-brand-500/40 text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-400"></select>
+                    <label class="text-xs uppercase tracking-widest text-brand-300 dark:text-brand-400 font-medium">Select Artwork:</label>
+                    <select id="viz-art-select" onchange="updateRoomVisualizer()" class="w-full bg-charcoal-800 dark:bg-[#1a1714] border border-brand-500/40 dark:border-brand-500/30 text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-400"></select>
                 </div>
                 <div class="space-y-2">
-                    <label class="text-xs uppercase tracking-widest text-brand-300 font-medium">Select Frame Style:</label>
+                    <label class="text-xs uppercase tracking-widest text-brand-300 dark:text-brand-400 font-medium">Select Frame Style:</label>
                     <div class="grid grid-cols-3 gap-3">
                         <button onclick="setVizFrame('gold')" id="viz-frame-btn-gold" class="viz-frame-btn active bg-brand-500 text-white p-3 rounded-xl text-xs font-medium border border-brand-400 flex flex-col items-center justify-center space-y-1"><span class="w-4 h-4 rounded-full border-2 border-amber-300 bg-amber-600"></span><span>Gilded Gold</span></button>
-                        <button onclick="setVizFrame('black')" id="viz-frame-btn-black" class="viz-frame-btn bg-charcoal-800 text-gray-300 p-3 rounded-xl text-xs font-medium border border-gray-700 flex flex-col items-center justify-center space-y-1"><span class="w-4 h-4 rounded-full border-2 border-gray-400 bg-black"></span><span>Matte Black</span></button>
-                        <button onclick="setVizFrame('oak')" id="viz-frame-btn-oak" class="viz-frame-btn bg-charcoal-800 text-gray-300 p-3 rounded-xl text-xs font-medium border border-gray-700 flex flex-col items-center justify-center space-y-1"><span class="w-4 h-4 rounded-full border-2 border-amber-200 bg-amber-800"></span><span>Natural Oak</span></button>
+                        <button onclick="setVizFrame('black')" id="viz-frame-btn-black" class="viz-frame-btn bg-charcoal-800 dark:bg-[#1a1714] text-gray-300 p-3 rounded-xl text-xs font-medium border border-gray-700 dark:border-gray-800 flex flex-col items-center justify-center space-y-1"><span class="w-4 h-4 rounded-full border-2 border-gray-400 bg-black"></span><span>Matte Black</span></button>
+                        <button onclick="setVizFrame('oak')" id="viz-frame-btn-oak" class="viz-frame-btn bg-charcoal-800 dark:bg-[#1a1714] text-gray-300 p-3 rounded-xl text-xs font-medium border border-gray-700 dark:border-gray-800 flex flex-col items-center justify-center space-y-1"><span class="w-4 h-4 rounded-full border-2 border-amber-200 bg-amber-800"></span><span>Natural Oak</span></button>
                     </div>
                 </div>
                 <div class="pt-4">
@@ -282,27 +283,27 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-5">
             <div class="relative">
-                <div class="absolute -inset-3 bg-brand-200/60 rounded-3xl -rotate-2"></div>
-                <div class="relative bg-white p-4 rounded-2xl shadow-xl border border-brand-200">
+                <div class="absolute -inset-3 bg-brand-200/60 dark:bg-brand-500/20 rounded-3xl -rotate-2"></div>
+                <div class="relative bg-white dark:bg-[#1a1714] p-4 rounded-2xl shadow-xl border border-brand-200 dark:border-brand-500/20">
                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Preeti Kumari Artist Portrait" class="w-full h-auto rounded-xl object-cover aspect-[4/5] filter contrast-[1.02]">
                     <div class="mt-4 text-center">
-                        <span class="cursive-title text-3xl text-brand-600">Preeti Kumari</span>
-                        <p class="text-xs uppercase tracking-widest text-gray-500">Founder &amp; Lead Artist at ThePrettyArts</p>
+                        <span class="cursive-title text-3xl text-brand-600 dark:text-brand-400">Preeti Kumari</span>
+                        <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Founder &amp; Lead Artist at ThePrettyArts</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="lg:col-span-7 space-y-6">
-            <span class="cursive-title text-4xl text-brand-600">Meet the Creator</span>
-            <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 leading-tight">"Art is not what I see, but what I invite others to feel."</h2>
-            <p class="text-gray-700 text-sm sm:text-base leading-relaxed">Welcome! I am <strong>Preeti Kumari</strong>, the artist behind <strong>ThePrettyArts</strong>. My creative journey is rooted in capturing quiet moments, tactile textures, and vibrant emotional landscapes. Through rich acrylics, delicate oils, and metallic accents, each piece is born out of a passion for atmospheric elegance.</p>
-            <p class="text-gray-700 text-sm sm:text-base leading-relaxed">Whether you are an art collector seeking a physical archival framed print for your living room wall or a designer looking for ultra-high-resolution digital artwork downloads, my studio ensures each artwork brings warmth and luxury into your space.</p>
+            <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Meet the Creator</span>
+            <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-cream leading-tight">"Art is not what I see, but what I invite others to feel."</h2>
+            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Welcome! I am <strong>Preeti Kumari</strong>, the artist behind <strong>ThePrettyArts</strong>. My creative journey is rooted in capturing quiet moments, tactile textures, and vibrant emotional landscapes. Through rich acrylics, delicate oils, and metallic accents, each piece is born out of a passion for atmospheric elegance.</p>
+            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Whether you are an art collector seeking a physical archival framed print for your living room wall or a designer looking for ultra-high-resolution digital artwork downloads, my studio ensures each artwork brings warmth and luxury into your space.</p>
             <div class="pt-4 grid grid-cols-2 gap-4 text-center sm:text-left">
-                <div class="bg-brand-50 p-4 rounded-xl border border-brand-200/60"><span class="text-2xl font-serif font-bold text-brand-700 block">50+</span><span class="text-xs text-gray-600 uppercase tracking-wider">Original Paintings</span></div>
-                <div class="bg-brand-50 p-4 rounded-xl border border-brand-200/60"><span class="text-2xl font-serif font-bold text-brand-700 block">100%</span><span class="text-xs text-gray-600 uppercase tracking-wider">Satisfaction Guaranteed</span></div>
+                <div class="bg-brand-50 dark:bg-brand-900/40 p-4 rounded-xl border border-brand-200/60 dark:border-brand-500/20"><span class="text-2xl font-serif font-bold text-brand-700 dark:text-brand-300 block">50+</span><span class="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider">Original Paintings</span></div>
+                <div class="bg-brand-50 dark:bg-brand-900/40 p-4 rounded-xl border border-brand-200/60 dark:border-brand-500/20"><span class="text-2xl font-serif font-bold text-brand-700 dark:text-brand-300 block">100%</span><span class="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider">Satisfaction Guaranteed</span></div>
             </div>
             <div class="pt-4">
-                <a href="https://wa.me/919876543210?text=Hello%20Preeti!%20I%20read%20your%20story%20on%20theprettyarts.com%20and%20would%20love%20to%20connect." target="_blank" class="inline-flex items-center space-x-2 text-brand-700 font-semibold hover:text-brand-900 transition-colors group">
+                <a href="https://wa.me/919876543210?text=Hello%20Preeti!%20I%20read%20your%20story%20on%20theprettyarts.com%20and%20would%20love%20to%20connect." target="_blank" class="inline-flex items-center space-x-2 text-brand-700 dark:text-brand-400 font-semibold hover:text-brand-900 dark:hover:text-brand-300 transition-colors group">
                     <span class="underline underline-offset-4">Chat Directly with Preeti on WhatsApp</span>
                     <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                 </a>
@@ -312,24 +313,24 @@
 </section>
 
 <!-- Custom Commission Builder Section -->
-<section id="commissions" class="py-20 bg-brand-50 border-y border-brand-200/60">
+<section id="commissions" class="py-20 bg-brand-50 dark:bg-[#0f0d0b] border-y border-brand-200/60 dark:border-brand-500/20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
-            <span class="cursive-title text-4xl text-brand-600">Tailored Fine Art</span>
-            <h2 class="text-3xl font-serif text-charcoal-900">Request a Custom Painting</h2>
-            <p class="text-gray-600 text-sm mt-2">Have a specific palette or wall dimension in mind? Customize your artwork with Preeti Kumari directly over WhatsApp.</p>
+            <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Tailored Fine Art</span>
+            <h2 class="text-3xl font-serif text-charcoal-900 dark:text-cream">Request a Custom Painting</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">Have a specific palette or wall dimension in mind? Customize your artwork with Preeti Kumari directly over WhatsApp.</p>
         </div>
-        <div class="bg-white p-6 sm:p-10 rounded-3xl shadow-xl border border-brand-200 space-y-6">
+        <div class="bg-white dark:bg-[#1a1714] p-6 sm:p-10 rounded-3xl shadow-xl border border-brand-200 dark:border-brand-500/20 space-y-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div><label class="block text-xs uppercase tracking-widest text-gray-700 font-semibold mb-2">Your Full Name</label><input type="text" id="comm-name" placeholder="e.g. Sophia Sharma" class="w-full bg-cream border border-brand-300 rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500"></div>
-                <div><label class="block text-xs uppercase tracking-widest text-gray-700 font-semibold mb-2">Preferred Art Style</label><select id="comm-style" class="w-full bg-cream border border-brand-300 rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500"><option>Abstract &amp; Texture</option><option>Floral &amp; Botanical</option><option>Landscape / Nature</option><option>Custom Portrait</option></select></div>
+                <div><label class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Your Full Name</label><input type="text" id="comm-name" placeholder="e.g. Sophia Sharma" class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"></div>
+                <div><label class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Preferred Art Style</label><select id="comm-style" class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"><option>Abstract &amp; Texture</option><option>Floral &amp; Botanical</option><option>Landscape / Nature</option><option>Custom Portrait</option></select></div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div><label class="block text-xs uppercase tracking-widest text-gray-700 font-semibold mb-2">Art Format</label><select id="comm-format" class="w-full bg-cream border border-brand-300 rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500"><option>Framed Canvas Print</option><option>Original Handmade Painting</option><option>Digital High-Res Download</option></select></div>
-                <div><label class="block text-xs uppercase tracking-widest text-gray-700 font-semibold mb-2">Estimated Canvas Size</label><select id="comm-size" class="w-full bg-cream border border-brand-300 rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500"><option>Medium (18 x 24 inches)</option><option>Large (24 x 36 inches)</option><option>Statement Oversized (36 x 48 inches)</option><option>Custom Dimensions</option></select></div>
+                <div><label class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Art Format</label><select id="comm-format" class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"><option>Framed Canvas Print</option><option>Original Handmade Painting</option><option>Digital High-Res Download</option></select></div>
+                <div><label class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Estimated Canvas Size</label><select id="comm-size" class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"><option>Medium (18 x 24 inches)</option><option>Large (24 x 36 inches)</option><option>Statement Oversized (36 x 48 inches)</option><option>Custom Dimensions</option></select></div>
             </div>
-            <div><label class="block text-xs uppercase tracking-widest text-gray-700 font-semibold mb-2">Color Palette &amp; Notes</label><textarea id="comm-notes" rows="3" placeholder="Mention your preferred wall color, room lighting, or design inspirations..." class="w-full bg-cream border border-brand-300 rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500"></textarea></div>
-            <button onclick="sendCommissionWhatsApp()" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-4 rounded-xl text-sm uppercase tracking-widest transition-all shadow-lg flex items-center justify-center space-x-2"><i class="fa-brands fa-whatsapp text-xl"></i><span>Send Commission Details to WhatsApp</span></button>
+            <div><label class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Color Palette &amp; Notes</label><textarea id="comm-notes" rows="3" placeholder="Mention your preferred wall color, room lighting, or design inspirations..." class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"></textarea></div>
+            <button onclick="sendCommissionWhatsApp()" class="w-full bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white font-medium py-4 rounded-xl text-sm uppercase tracking-widest transition-all shadow-lg flex items-center justify-center space-x-2"><i class="fa-brands fa-whatsapp text-xl"></i><span>Send Commission Details to WhatsApp</span></button>
         </div>
     </div>
 </section>
@@ -337,36 +338,36 @@
 <!-- Collector Reviews Section -->
 <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="cursive-title text-4xl text-brand-600">Words from Collectors</span>
-        <h2 class="text-3xl font-serif text-charcoal-900 mt-1">Lover of ThePrettyArts</h2>
+        <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Words from Collectors</span>
+        <h2 class="text-3xl font-serif text-charcoal-900 dark:text-cream mt-1">Lover of ThePrettyArts</h2>
         <div class="w-12 h-0.5 bg-brand-500 mx-auto mt-3"></div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-2xl border border-brand-200/80 shadow-md flex flex-col justify-between"><div><div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="font-editorial text-lg text-charcoal-800 italic">"The framed print of 'Whispers of Gold' arrived impeccably packaged. The gold leaf textures look breathtaking under our gallery lighting."</p></div><div class="mt-6 pt-4 border-t border-brand-100"><p class="text-xs font-bold text-charcoal-900">Ananya R.</p><p class="text-[10px] text-gray-500 uppercase">Mumbai, India</p></div></div>
-        <div class="bg-white p-6 rounded-2xl border border-brand-200/80 shadow-md flex flex-col justify-between"><div><div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="font-editorial text-lg text-charcoal-800 italic">"I bought the digital high-res copy and printed it on canvas locally. Preeti sent the file over WhatsApp instantly. So helpful!"</p></div><div class="mt-6 pt-4 border-t border-brand-100"><p class="text-xs font-bold text-charcoal-900">Vikram S.</p><p class="text-[10px] text-gray-500 uppercase">Bangalore, India</p></div></div>
-        <div class="bg-white p-6 rounded-2xl border border-brand-200/80 shadow-md flex flex-col justify-between"><div><div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="font-editorial text-lg text-charcoal-800 italic">"Commissioned a landscape painting for my office. Preeti understood exactly what I wanted — the result was beyond my imagination."</p></div><div class="mt-6 pt-4 border-t border-brand-100"><p class="text-xs font-bold text-charcoal-900">Meera T.</p><p class="text-[10px] text-gray-500 uppercase">Delhi, India</p></div></div>
+        <div class="bg-white dark:bg-[#1a1714] p-6 rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-md flex flex-col justify-between"><div><div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="font-editorial text-lg text-charcoal-800 dark:text-gray-300 italic">"The framed print of 'Whispers of Gold' arrived impeccably packaged. The gold leaf textures look breathtaking under our gallery lighting."</p></div><div class="mt-6 pt-4 border-t border-brand-100 dark:border-brand-500/20"><p class="text-xs font-bold text-charcoal-900 dark:text-cream">Ananya R.</p><p class="text-[10px] text-gray-500 dark:text-gray-400 uppercase">Mumbai, India</p></div></div>
+        <div class="bg-white dark:bg-[#1a1714] p-6 rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-md flex flex-col justify-between"><div><div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="font-editorial text-lg text-charcoal-800 dark:text-gray-300 italic">"I bought the digital high-res copy and printed it on canvas locally. Preeti sent the file over WhatsApp instantly. So helpful!"</p></div><div class="mt-6 pt-4 border-t border-brand-100 dark:border-brand-500/20"><p class="text-xs font-bold text-charcoal-900 dark:text-cream">Vikram S.</p><p class="text-[10px] text-gray-500 dark:text-gray-400 uppercase">Bangalore, India</p></div></div>
+        <div class="bg-white dark:bg-[#1a1714] p-6 rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-md flex flex-col justify-between"><div><div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="font-editorial text-lg text-charcoal-800 dark:text-gray-300 italic">"Commissioned a landscape painting for my office. Preeti understood exactly what I wanted — the result was beyond my imagination."</p></div><div class="mt-6 pt-4 border-t border-brand-100 dark:border-brand-500/20"><p class="text-xs font-bold text-charcoal-900 dark:text-cream">Meera T.</p><p class="text-[10px] text-gray-500 dark:text-gray-400 uppercase">Delhi, India</p></div></div>
     </div>
 </section>
 
 <!-- FAQ Section -->
-<section id="faq" class="py-20 bg-brand-50 border-t border-brand-200/60">
+<section id="faq" class="py-20 bg-brand-50 dark:bg-black border-t border-brand-200/60 dark:border-brand-500/20">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-            <span class="cursive-title text-4xl text-brand-600">Questions &amp; Answers</span>
-            <h2 class="text-3xl font-serif text-charcoal-900 mt-1">Frequently Asked</h2>
+            <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Questions &amp; Answers</span>
+            <h2 class="text-3xl font-serif text-charcoal-900 dark:text-cream mt-1">Frequently Asked</h2>
             <div class="w-12 h-0.5 bg-brand-500 mx-auto mt-3"></div>
         </div>
         <div class="space-y-4" id="faq-accordion">
-            <div class="faq-item bg-white rounded-2xl border border-brand-200/80 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 text-sm"><span>What formats do I receive with a Digital Copy?</span><i class="fa-solid fa-chevron-down text-brand-500 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 leading-relaxed">You will receive full-resolution JPG and PNG files (300 DPI) via WhatsApp or Email within minutes of payment. The files are print-ready for sizes up to 24"x36" (A1).</div></div>
-            <div class="faq-item bg-white rounded-2xl border border-brand-200/80 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 text-sm"><span>How long does framed print delivery take?</span><i class="fa-solid fa-chevron-down text-brand-500 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 leading-relaxed">Framed prints are handcrafted and delivered within 7-14 business days across India. International orders may take 3-4 weeks with full tracking.</div></div>
-            <div class="faq-item bg-white rounded-2xl border border-brand-200/80 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 text-sm"><span>Can I request a custom painting of a specific scene or photo?</span><i class="fa-solid fa-chevron-down text-brand-500 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 leading-relaxed">Absolutely! Use the Custom Commission form above or contact Preeti directly on WhatsApp with reference images, preferred style, size, and color palette. Turnaround for commissions is typically 2-4 weeks.</div></div>
-            <div class="faq-item bg-white rounded-2xl border border-brand-200/80 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 text-sm"><span>What payment methods are accepted?</span><i class="fa-solid fa-chevron-down text-brand-500 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 leading-relaxed">Payments are accepted via UPI, bank transfer, PayPal, and international wire. Details are shared directly via WhatsApp after inquiry confirmation.</div></div>
+            <div class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>What formats do I receive with a Digital Copy?</span><i class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">You will receive full-resolution JPG and PNG files (300 DPI) via WhatsApp or Email within minutes of payment. The files are print-ready for sizes up to 24"x36" (A1).</div></div>
+            <div class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>How long does framed print delivery take?</span><i class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Framed prints are handcrafted and delivered within 7-14 business days across India. International orders may take 3-4 weeks with full tracking.</div></div>
+            <div class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>Can I request a custom painting of a specific scene or photo?</span><i class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Absolutely! Use the Custom Commission form above or contact Preeti directly on WhatsApp with reference images, preferred style, size, and color palette. Turnaround for commissions is typically 2-4 weeks.</div></div>
+            <div class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>What payment methods are accepted?</span><i class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Payments are accepted via UPI, bank transfer, PayPal, and international wire. Details are shared directly via WhatsApp after inquiry confirmation.</div></div>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-charcoal-900 text-brand-200 py-12 border-t border-brand-800">
+<footer class="bg-charcoal-900 dark:bg-[#0a0a0a] text-brand-200 py-12 border-t border-brand-800 dark:border-brand-500/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span class="cursive-title text-4xl text-brand-400">ThePrettyArts</span>
         <p class="text-xs uppercase tracking-[0.3em] text-brand-500 mt-1">by Preeti Kumari</p>
@@ -375,23 +376,23 @@
 </footer>
 
 <!-- Art Detail Modal -->
-<div id="art-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-charcoal-900/90 backdrop-blur-sm p-4">
-    <div class="bg-cream rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative border border-brand-200">
-        <button onclick="closeArtModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-charcoal-900/70 hover:bg-charcoal-900 text-white rounded-full flex items-center justify-center text-sm transition-all"><i class="fa-solid fa-times"></i></button>
+<div id="art-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-charcoal-900/90 dark:bg-black/90 backdrop-blur-sm p-4">
+    <div class="bg-cream dark:bg-[#1a1714] rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative border border-brand-200 dark:border-brand-500/20">
+        <button onclick="closeArtModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-charcoal-900/70 dark:bg-black/70 hover:bg-charcoal-900 dark:hover:bg-black text-white rounded-full flex items-center justify-center text-sm transition-all"><i class="fa-solid fa-times"></i></button>
         <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="relative aspect-square lg:aspect-auto lg:min-h-[450px] bg-gray-100 rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none overflow-hidden"><img id="modal-img" src="" alt="" class="w-full h-full object-cover"></div>
+            <div class="relative aspect-square lg:aspect-auto lg:min-h-[450px] bg-gray-100 dark:bg-[#0f0d0b] rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none overflow-hidden"><img id="modal-img" src="" alt="" class="w-full h-full object-cover"></div>
             <div class="p-8 lg:p-10 flex flex-col justify-between">
                 <div>
-                    <span id="modal-category" class="inline-block bg-brand-100 text-brand-800 text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-brand-300 mb-3"></span>
-                    <h3 id="modal-title" class="font-serif text-3xl text-charcoal-900 mb-1"></h3>
-                    <p id="modal-medium" class="text-sm text-gray-500 italic mb-4"></p>
-                    <p id="modal-description" class="text-gray-700 text-sm leading-relaxed mb-6"></p>
+                    <span id="modal-category" class="inline-block bg-brand-100 dark:bg-brand-900/40 text-brand-800 dark:text-brand-300 text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-brand-300 dark:border-brand-500/40 mb-3"></span>
+                    <h3 id="modal-title" class="font-serif text-3xl text-charcoal-900 dark:text-cream mb-1"></h3>
+                    <p id="modal-medium" class="text-sm text-gray-500 dark:text-gray-400 italic mb-4"></p>
+                    <p id="modal-description" class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-6"></p>
                     <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="bg-brand-50 p-3 rounded-xl border border-brand-200/60"><p class="text-xs text-gray-500 uppercase tracking-wider mb-0.5">Digital Copy</p><p class="text-sm font-semibold text-brand-800">300 DPI Available</p></div>
-                        <div class="bg-brand-50 p-3 rounded-xl border border-brand-200/60"><p class="text-xs text-gray-500 uppercase tracking-wider mb-0.5">Framed Print</p><p class="text-sm font-semibold text-brand-800">3 Sizes Available</p></div>
+                        <div class="bg-brand-50 dark:bg-[#0f0d0b] p-3 rounded-xl border border-brand-200/60 dark:border-brand-500/20"><p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-0.5">Digital Copy</p><p class="text-sm font-semibold text-brand-800 dark:text-brand-300">300 DPI Available</p></div>
+                        <div class="bg-brand-50 dark:bg-[#0f0d0b] p-3 rounded-xl border border-brand-200/60 dark:border-brand-500/20"><p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-0.5">Framed Print</p><p class="text-sm font-semibold text-brand-800 dark:text-brand-300">3 Sizes Available</p></div>
                     </div>
                 </div>
-                <a id="modal-wa-btn" href="#" target="_blank" class="block w-full bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-3.5 rounded-xl text-sm uppercase tracking-widest text-center transition-all flex items-center justify-center space-x-2"><i class="fa-brands fa-whatsapp text-xl"></i><span>Inquire on WhatsApp</span></a>
+                <a id="modal-wa-btn" href="#" target="_blank" class="block w-full bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white font-medium py-3.5 rounded-xl text-sm uppercase tracking-widest text-center transition-all flex items-center justify-center space-x-2"><i class="fa-brands fa-whatsapp text-xl"></i><span>Inquire on WhatsApp</span></a>
             </div>
         </div>
     </div>
@@ -451,6 +452,17 @@
 
             <!-- TAB: SITE CONTENT -->
             <div id="tab-content" class="admin-tab-pane">
+                <div class="admin-section">
+                    <div class="admin-section-title"><i class="fa-solid fa-palette"></i> Site Theme</div>
+                    <div class="admin-field">
+                        <label class="admin-label">Select Theme</label>
+                        <select id="sc-theme" class="admin-input" style="background:#0f0d0b; color:#FDFBF7;">
+                            <option value="dark">Dark Theme (Default)</option>
+                            <option value="light">Light Theme</option>
+                        </select>
+                    </div>
+                    <button class="admin-btn-sm admin-btn-save" onclick="saveSiteTheme()">Save Theme</button>
+                </div>
                 <div class="admin-section">
                     <div class="admin-section-title"><i class="fa-solid fa-bullhorn"></i> Announcement Bar</div>
                     <div class="admin-field">
@@ -658,6 +670,7 @@ function showTab(tab) {
 
 // ─── SITE SETTINGS ───────────────────────
 const DEFAULTS = {
+    site_theme: 'dark',
     announcement_bar_text: 'Fine Art Studio • High-Res Digital Downloads & Museum-Grade Framed Prints • Worldwide Delivery',
     hero_h1_line1:         'Transforming Canvas into',
     hero_h1_cursive:       'Timeless Emotion',
@@ -674,6 +687,11 @@ async function loadSiteSettings() {
     applySettings({ ...DEFAULTS, ...map });
 }
 function applySettings(s) {
+    if (s.site_theme === 'light') {
+        document.documentElement.classList.remove('dark');
+    } else {
+        document.documentElement.classList.add('dark');
+    }
     setText('announcement-bar-text', s.announcement_bar_text);
     setText('hero-h1-line1',         s.hero_h1_line1);
     setText('hero-h1-cursive',       s.hero_h1_cursive);
@@ -683,6 +701,7 @@ function applySettings(s) {
     if (img && s.hero_image_url) img.src = s.hero_image_url;
 }
 function populateSiteContentForm() {
+    setVal('sc-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
     setVal('sc-announcement',  getText('announcement-bar-text'));
     setVal('sc-h1-line1',      getText('hero-h1-line1'));
     setVal('sc-h1-cursive',    getText('hero-h1-cursive'));
@@ -694,6 +713,13 @@ function populateSiteContentForm() {
 }
 async function upsertSetting(key, value) {
     await _sb.from('site_settings').upsert({ key, value }, { onConflict:'key' });
+}
+async function saveSiteTheme() {
+    const val = document.getElementById('sc-theme').value;
+    await upsertSetting('site_theme', val);
+    if (val === 'light') { document.documentElement.classList.remove('dark'); }
+    else { document.documentElement.classList.add('dark'); }
+    toast('Site theme updated!');
 }
 async function saveAnnouncementBar() {
     const val = document.getElementById('sc-announcement').value.trim();
@@ -819,22 +845,22 @@ function renderGalleryCards(artworks) {
         const catLbl   = catLabel.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
         const desc     = (a.description||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
         const imgSafe  = img.replace(/'/g,"\\'");
-        return '<div class="art-card group bg-white rounded-2xl overflow-hidden border border-brand-200/60 shadow-md hover:shadow-2xl transition-all duration-300" data-category="' + catSlug + '">'
-            + '<div class="relative aspect-[4/5] overflow-hidden bg-gray-100">'
+        return '<div class="art-card group bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md hover:shadow-2xl transition-all duration-300" data-category="' + catSlug + '">'
+            + '<div class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-black">'
             + '<img src="' + img + '" alt="' + (a.title||'') + '" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">'
-            + '<div class="absolute inset-0 bg-charcoal-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-3 p-4">'
-            + '<button onclick="openArtModal(\'' + title + '\',\'' + catLbl + '\',\'' + medium + '\',\'' + imgSafe + '\',\'' + desc + '\')" class="bg-cream text-charcoal-900 text-xs font-semibold uppercase tracking-wider px-4 py-2.5 rounded-full shadow-lg hover:bg-brand-500 hover:text-white transition-all">View Details</button>'
+            + '<div class="absolute inset-0 bg-charcoal-900/40 dark:bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-3 p-4">'
+            + '<button onclick="openArtModal(\'' + title + '\',\'' + catLbl + '\',\'' + medium + '\',\'' + imgSafe + '\',\'' + desc + '\')" class="bg-cream dark:bg-brand-600 text-charcoal-900 dark:text-cream text-xs font-semibold uppercase tracking-wider px-4 py-2.5 rounded-full shadow-lg hover:bg-brand-500 hover:text-white transition-all">View Details</button>'
             + '</div>'
-            + '<span class="absolute top-3 left-3 bg-cream/90 backdrop-blur-md text-brand-800 text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full border border-brand-300">' + catLabel + '</span>'
+            + '<span class="absolute top-3 left-3 bg-cream/90 dark:bg-[#0f0d0b]/90 backdrop-blur-md text-brand-800 dark:text-brand-300 text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full border border-brand-300 dark:border-brand-500/40">' + catLabel + '</span>'
             + '</div>'
             + '<div class="p-5">'
-            + '<h3 class="font-serif text-xl text-charcoal-900 group-hover:text-brand-600 transition-colors">' + (a.title||'') + '</h3>'
-            + '<p class="text-xs text-gray-500 mt-1 italic">' + (a.medium||'') + '</p>'
-            + '<div class="mt-4 pt-3 border-t border-brand-100 flex items-center justify-between text-xs">'
-            + '<span class="text-gray-600"><i class="fa-solid fa-download text-brand-500 mr-1"></i> Digital: Available</span>'
-            + '<span class="text-gray-600"><i class="fa-solid fa-frame text-brand-500 mr-1"></i> Framed: 3 Sizes</span>'
+            + '<h3 class="font-serif text-xl text-charcoal-900 dark:text-cream group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">' + (a.title||'') + '</h3>'
+            + '<p class="text-xs text-gray-500 dark:text-gray-400 mt-1 italic">' + (a.medium||'') + '</p>'
+            + '<div class="mt-4 pt-3 border-t border-brand-100 dark:border-brand-500/20 flex items-center justify-between text-xs">'
+            + '<span class="text-gray-600 dark:text-gray-300"><i class="fa-solid fa-download text-brand-500 mr-1"></i> Digital: Available</span>'
+            + '<span class="text-gray-600 dark:text-gray-300"><i class="fa-solid fa-frame text-brand-500 mr-1"></i> Framed: 3 Sizes</span>'
             + '</div>'
-            + '<button onclick="openArtModal(\'' + title + '\',\'' + catLbl + '\',\'' + medium + '\',\'' + imgSafe + '\',\'' + desc + '\')" class="mt-4 w-full bg-brand-50 hover:bg-brand-100 text-brand-800 font-medium py-2.5 rounded-xl text-xs uppercase tracking-widest transition-colors flex items-center justify-center space-x-2"><span>Inquire Artwork</span><i class="fa-solid fa-arrow-right text-xs"></i></button>'
+            + '<button onclick="openArtModal(\'' + title + '\',\'' + catLbl + '\',\'' + medium + '\',\'' + imgSafe + '\',\'' + desc + '\')" class="mt-4 w-full bg-brand-50 dark:bg-brand-900/40 hover:bg-brand-100 dark:hover:bg-brand-900/60 text-brand-800 dark:text-brand-300 font-medium py-2.5 rounded-xl text-xs uppercase tracking-widest transition-colors flex items-center justify-center space-x-2"><span>Inquire Artwork</span><i class="fa-solid fa-arrow-right text-xs"></i></button>'
             + '</div></div>';
     }).join('');
 }
