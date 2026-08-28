@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThePrettyArts | Original Paintings &amp; Fine Art Prints by Preeti Kumari</title>
-    <meta name="description" content="Explore original paintings, high-resolution digital copies, and museum-grade framed prints by Preeti Kumari at ThePrettyArts.com.">
+    <meta name="description"
+        content="Explore original paintings, high-resolution digital copies, and museum-grade framed prints by Preeti Kumari at ThePrettyArts.com.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -17,1120 +21,1905 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: { 50:'#FAF8F5',100:'#F4ECE1',200:'#E8D7C2',300:'#D7BD9D',400:'#C5A478',500:'#B08852',600:'#8E6838',700:'#6B4C26',800:'#483219',900:'#2A1A0C' },
-                        charcoal: { 800:'#23201D', 900:'#171513' },
+                        brand: { 50: '#FAF8F5', 100: '#F4ECE1', 200: '#E8D7C2', 300: '#D7BD9D', 400: '#C5A478', 500: '#B08852', 600: '#8E6838', 700: '#6B4C26', 800: '#483219', 900: '#2A1A0C' },
+                        charcoal: { 800: '#23201D', 900: '#171513' },
                         cream: '#FDFBF7',
                     },
                     fontFamily: {
-                        serif:['"Playfair Display"','serif'],
-                        cursive:['"Great Vibes"','cursive'],
-                        editorial:['"Cormorant Garamond"','serif'],
-                        sans:['"Plus Jakarta Sans"','sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        cursive: ['"Great Vibes"', 'cursive'],
+                        editorial: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        .frame-shadow{box-shadow:0 20px 40px -15px rgba(23,21,19,.25),0 0 15px rgba(0,0,0,.08)}
-        .cursive-title{font-family:'Great Vibes',cursive}
-        .frame-gold{border:16px solid #C5A478;outline:2px solid #8E6838;box-shadow:inset 0 0 10px rgba(0,0,0,.5),0 20px 30px rgba(0,0,0,.3)}
-        .frame-black{border:18px solid #171513;box-shadow:inset 0 0 5px rgba(255,255,255,.2),0 20px 30px rgba(0,0,0,.4)}
-        .frame-oak{border:16px solid #B08852;box-shadow:inset 0 0 8px rgba(0,0,0,.3),0 20px 30px rgba(0,0,0,.25)}
-        .matting-board{padding:24px;background-color:#FAFAFA;box-shadow:inset 0 0 8px rgba(0,0,0,.15)}
-        .no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
-        
+        .frame-shadow {
+            box-shadow: 0 20px 40px -15px rgba(23, 21, 19, .25), 0 0 15px rgba(0, 0, 0, .08)
+        }
+
+        .cursive-title {
+            font-family: 'Great Vibes', cursive
+        }
+
+        .frame-gold {
+            border: 16px solid #C5A478;
+            outline: 2px solid #8E6838;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, .5), 0 20px 30px rgba(0, 0, 0, .3)
+        }
+
+        .frame-black {
+            border: 18px solid #171513;
+            box-shadow: inset 0 0 5px rgba(255, 255, 255, .2), 0 20px 30px rgba(0, 0, 0, .4)
+        }
+
+        .frame-oak {
+            border: 16px solid #B08852;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, .3), 0 20px 30px rgba(0, 0, 0, .25)
+        }
+
+        .matting-board {
+            padding: 24px;
+            background-color: #FAFAFA;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, .15)
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none
+        }
+
         /* Subtle Ambient Gradient Animations */
         @keyframes ambientDrift {
-            0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.45; }
-            50% { transform: translate(30px, -20px) scale(1.12); opacity: 0.7; }
+
+            0%,
+            100% {
+                transform: translate(0px, 0px) scale(1);
+                opacity: 0.45;
+            }
+
+            50% {
+                transform: translate(30px, -20px) scale(1.12);
+                opacity: 0.7;
+            }
         }
+
         @keyframes ambientDriftReverse {
-            0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.35; }
-            50% { transform: translate(-25px, 20px) scale(1.08); opacity: 0.6; }
+
+            0%,
+            100% {
+                transform: translate(0px, 0px) scale(1);
+                opacity: 0.35;
+            }
+
+            50% {
+                transform: translate(-25px, 20px) scale(1.08);
+                opacity: 0.6;
+            }
         }
-        .ambient-glow-1 { animation: ambientDrift 18s ease-in-out infinite alternate; }
-        .ambient-glow-2 { animation: ambientDriftReverse 22s ease-in-out infinite alternate; }
-        
+
+        .ambient-glow-1 {
+            animation: ambientDrift 18s ease-in-out infinite alternate;
+        }
+
+        .ambient-glow-2 {
+            animation: ambientDriftReverse 22s ease-in-out infinite alternate;
+        }
+
         /* Card Hover Interactions */
         .art-card {
             transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
         }
+
         .art-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(176,136,82,0.22), 0 0 1px 1px rgba(197,164,120,0.35);
-            border-color: rgba(197,164,120,0.6) !important;
+            box-shadow: 0 25px 50px -12px rgba(176, 136, 82, 0.22), 0 0 1px 1px rgba(197, 164, 120, 0.35);
+            border-color: rgba(197, 164, 120, 0.6) !important;
         }
+
         .mode-card {
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
         }
+
         .mode-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 24px 48px -10px rgba(176,136,82,0.25), 0 0 1px 1px rgba(197,164,120,0.4);
-            border-color: rgba(197,164,120,0.65) !important;
+            box-shadow: 0 24px 48px -10px rgba(176, 136, 82, 0.25), 0 0 1px 1px rgba(197, 164, 120, 0.4);
+            border-color: rgba(197, 164, 120, 0.65) !important;
         }
+
         .mode-card:hover .mode-icon-circle {
             transform: scale(1.12);
-            background-color: rgba(176,136,82,0.35);
-            border-color: rgba(197,164,120,0.8);
-            box-shadow: 0 0 20px rgba(197,164,120,0.3);
+            background-color: rgba(176, 136, 82, 0.35);
+            border-color: rgba(197, 164, 120, 0.8);
+            box-shadow: 0 0 20px rgba(197, 164, 120, 0.3);
         }
+
         .review-card {
             transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
         }
+
         .review-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 40px -10px rgba(176,136,82,0.2);
-            border-color: rgba(197,164,120,0.55) !important;
+            box-shadow: 0 20px 40px -10px rgba(176, 136, 82, 0.2);
+            border-color: rgba(197, 164, 120, 0.55) !important;
         }
+
         .faq-item {
             transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
         }
+
         .faq-item:hover {
-            border-color: rgba(197,164,120,0.5) !important;
-            box-shadow: 0 8px 24px -6px rgba(176,136,82,0.12);
+            border-color: rgba(197, 164, 120, 0.5) !important;
+            box-shadow: 0 8px 24px -6px rgba(176, 136, 82, 0.12);
             transform: translateY(-2px);
         }
+
         .hero-art-wrapper {
             transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .hero-art-wrapper:hover {
             transform: translateY(-4px) scale(1.005);
         }
-        
+
         /* Smooth Scroll & Cinematic Section Reveals */
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 5.5rem;
         }
+
         .reveal-init {
             opacity: 0;
             transform: translateY(28px);
             transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: opacity, transform;
         }
+
         .reveal-visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         /* ADMIN PANEL */
-        #admin-panel{display:none;position:fixed;inset:0;z-index:9999;background:#0f0d0b;font-family:'Plus Jakarta Sans',sans-serif;overflow-y:auto}
-        #admin-panel.visible{display:block}
-        .admin-login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 60% 40%,rgba(176,136,82,.15) 0%,transparent 70%),#0f0d0b}
-        .admin-login-card{background:#1a1714;border:1px solid rgba(176,136,82,.3);border-radius:20px;padding:48px 40px;width:100%;max-width:420px;box-shadow:0 40px 80px rgba(0,0,0,.6)}
-        .admin-input{width:100%;background:#0f0d0b;border:1px solid rgba(176,136,82,.3);border-radius:10px;padding:12px 16px;color:#FDFBF7;font-size:14px;outline:none;transition:border-color .2s;box-sizing:border-box}
-        .admin-input:focus{border-color:#B08852}
-        .admin-input::placeholder{color:rgba(253,251,247,.35)}
-        textarea.admin-input{resize:vertical;min-height:70px}
-        .admin-btn-gold{width:100%;background:linear-gradient(135deg,#B08852,#8E6838);color:#FDFBF7;border:none;border-radius:10px;padding:13px 20px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .2s}
-        .admin-btn-gold:hover{background:linear-gradient(135deg,#C5A478,#B08852);transform:translateY(-1px)}
-        .admin-btn-gold:disabled{opacity:.5;cursor:not-allowed;transform:none}
-        .admin-btn-sm{padding:7px 14px;border-radius:8px;font-size:12px;font-weight:600;letter-spacing:.05em;cursor:pointer;transition:all .15s;border:none;display:inline-flex;align-items:center;gap:4px}
-        .admin-btn-edit{background:rgba(176,136,82,.2);color:#C5A478}.admin-btn-edit:hover{background:rgba(176,136,82,.35)}
-        .admin-btn-delete{background:rgba(220,38,38,.15);color:#f87171}.admin-btn-delete:hover{background:rgba(220,38,38,.3)}
-        .admin-btn-save{background:rgba(34,197,94,.2);color:#4ade80}.admin-btn-save:hover{background:rgba(34,197,94,.35)}
-        .admin-btn-cancel{background:rgba(255,255,255,.08);color:#9ca3af}.admin-btn-cancel:hover{background:rgba(255,255,255,.14)}
-        .admin-btn-add{background:rgba(176,136,82,.15);color:#C5A478;border:1px dashed rgba(176,136,82,.4);border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:.05em}
-        .admin-btn-add:hover{background:rgba(176,136,82,.25);border-color:#B08852}
-        .admin-dashboard{display:none;min-height:100vh}
-        .admin-dashboard.visible{display:flex;flex-direction:column}
-        .admin-header{background:#1a1714;border-bottom:1px solid rgba(176,136,82,.2);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-        .admin-content{flex:1;padding:32px;max-width:1000px;margin:0 auto;width:100%;box-sizing:border-box}
-        .admin-section{background:#1a1714;border:1px solid rgba(176,136,82,.15);border-radius:16px;padding:28px;margin-bottom:28px}
-        .admin-section-title{font-size:13px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#B08852;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(176,136,82,.2);display:flex;align-items:center;gap:8px}
-        .admin-label{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(253,251,247,.5);margin-bottom:6px}
-        .admin-field{margin-bottom:16px}
-        .admin-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-        @media(max-width:640px){.admin-grid-2{grid-template-columns:1fr}}
-        .artwork-list-item{background:#0f0d0b;border:1px solid rgba(176,136,82,.12);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:14px;margin-bottom:10px;transition:border-color .2s}
-        .artwork-list-item:hover{border-color:rgba(176,136,82,.3)}
-        .artwork-list-thumb{width:56px;height:64px;border-radius:8px;object-fit:cover;flex-shrink:0;background:#23201D}
-        .artwork-list-info{flex:1;min-width:0}
-        .artwork-list-title{color:#FDFBF7;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-        .artwork-list-meta{color:rgba(253,251,247,.45);font-size:12px;margin-top:2px}
-        .artwork-list-actions{display:flex;gap:8px;flex-shrink:0}
-        .artwork-edit-form{background:rgba(176,136,82,.04);border:1px solid rgba(176,136,82,.2);border-radius:12px;padding:20px;margin-bottom:10px}
-        .cat-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(176,136,82,.15);border:1px solid rgba(176,136,82,.3);border-radius:999px;padding:6px 14px;color:#C5A478;font-size:12px;font-weight:600;letter-spacing:.05em;margin:4px}
-        .cat-pill-delete{background:none;border:none;color:rgba(197,164,120,.6);cursor:pointer;font-size:14px;line-height:1;padding:0;transition:color .15s}
-        .cat-pill-delete:hover{color:#f87171}
-        .img-preview{width:100%;max-height:160px;object-fit:cover;border-radius:8px;margin-top:8px;display:none}
-        .img-preview.visible{display:block}
-        .admin-tab-btn{padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:1px solid transparent;color:rgba(253,251,247,.5);background:transparent;transition:all .2s}
-        .admin-tab-btn.active{background:rgba(176,136,82,.2);color:#C5A478;border-color:rgba(176,136,82,.3)}
-        .admin-tab-btn:hover:not(.active){color:rgba(253,251,247,.8);background:rgba(255,255,255,.05)}
-        #admin-toast{position:fixed;bottom:24px;right:24px;z-index:10000;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;opacity:0;transform:translateY(12px);transition:all .3s;pointer-events:none}
-        #admin-toast.show{opacity:1;transform:translateY(0)}
-        #admin-toast.success{background:rgba(34,197,94,.2);border:1px solid rgba(34,197,94,.4);color:#4ade80}
-        #admin-toast.error{background:rgba(220,38,38,.2);border:1px solid rgba(220,38,38,.4);color:#f87171}
-        .upload-area{border:2px dashed rgba(176,136,82,.3);border-radius:10px;padding:16px;text-align:center;cursor:pointer;transition:border-color .2s;color:rgba(253,251,247,.5);font-size:13px;display:block}
-        .upload-area:hover{border-color:rgba(176,136,82,.6);color:rgba(253,251,247,.8)}
-        .upload-area input[type=file]{display:none}
+        #admin-panel {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #0f0d0b;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-y: auto
+        }
+
+        #admin-panel.visible {
+            display: block
+        }
+
+        .admin-login-wrap {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(ellipse at 60% 40%, rgba(176, 136, 82, .15) 0%, transparent 70%), #0f0d0b
+        }
+
+        .admin-login-card {
+            background: #1a1714;
+            border: 1px solid rgba(176, 136, 82, .3);
+            border-radius: 20px;
+            padding: 48px 40px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, .6)
+        }
+
+        .admin-input {
+            width: 100%;
+            background: #0f0d0b;
+            border: 1px solid rgba(176, 136, 82, .3);
+            border-radius: 10px;
+            padding: 12px 16px;
+            color: #FDFBF7;
+            font-size: 14px;
+            outline: none;
+            transition: border-color .2s;
+            box-sizing: border-box
+        }
+
+        .admin-input:focus {
+            border-color: #B08852
+        }
+
+        .admin-input::placeholder {
+            color: rgba(253, 251, 247, .35)
+        }
+
+        textarea.admin-input {
+            resize: vertical;
+            min-height: 70px
+        }
+
+        .admin-btn-gold {
+            width: 100%;
+            background: linear-gradient(135deg, #B08852, #8E6838);
+            color: #FDFBF7;
+            border: none;
+            border-radius: 10px;
+            padding: 13px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all .2s
+        }
+
+        .admin-btn-gold:hover {
+            background: linear-gradient(135deg, #C5A478, #B08852);
+            transform: translateY(-1px)
+        }
+
+        .admin-btn-gold:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+            transform: none
+        }
+
+        .admin-btn-sm {
+            padding: 7px 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .05em;
+            cursor: pointer;
+            transition: all .15s;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px
+        }
+
+        .admin-btn-edit {
+            background: rgba(176, 136, 82, .2);
+            color: #C5A478
+        }
+
+        .admin-btn-edit:hover {
+            background: rgba(176, 136, 82, .35)
+        }
+
+        .admin-btn-delete {
+            background: rgba(220, 38, 38, .15);
+            color: #f87171
+        }
+
+        .admin-btn-delete:hover {
+            background: rgba(220, 38, 38, .3)
+        }
+
+        .admin-btn-save {
+            background: rgba(34, 197, 94, .2);
+            color: #4ade80
+        }
+
+        .admin-btn-save:hover {
+            background: rgba(34, 197, 94, .35)
+        }
+
+        .admin-btn-cancel {
+            background: rgba(255, 255, 255, .08);
+            color: #9ca3af
+        }
+
+        .admin-btn-cancel:hover {
+            background: rgba(255, 255, 255, .14)
+        }
+
+        .admin-btn-add {
+            background: rgba(176, 136, 82, .15);
+            color: #C5A478;
+            border: 1px dashed rgba(176, 136, 82, .4);
+            border-radius: 10px;
+            padding: 10px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s;
+            letter-spacing: .05em
+        }
+
+        .admin-btn-add:hover {
+            background: rgba(176, 136, 82, .25);
+            border-color: #B08852
+        }
+
+        .admin-dashboard {
+            display: none;
+            min-height: 100vh
+        }
+
+        .admin-dashboard.visible {
+            display: flex;
+            flex-direction: column
+        }
+
+        .admin-header {
+            background: #1a1714;
+            border-bottom: 1px solid rgba(176, 136, 82, .2);
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100
+        }
+
+        .admin-content {
+            flex: 1;
+            padding: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box
+        }
+
+        .admin-section {
+            background: #1a1714;
+            border: 1px solid rgba(176, 136, 82, .15);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 28px
+        }
+
+        .admin-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: #B08852;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(176, 136, 82, .2);
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .admin-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(253, 251, 247, .5);
+            margin-bottom: 6px
+        }
+
+        .admin-field {
+            margin-bottom: 16px
+        }
+
+        .admin-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px
+        }
+
+        @media(max-width:640px) {
+            .admin-grid-2 {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .artwork-list-item {
+            background: #0f0d0b;
+            border: 1px solid rgba(176, 136, 82, .12);
+            border-radius: 12px;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 10px;
+            transition: border-color .2s
+        }
+
+        .artwork-list-item:hover {
+            border-color: rgba(176, 136, 82, .3)
+        }
+
+        .artwork-list-thumb {
+            width: 56px;
+            height: 64px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+            background: #23201D
+        }
+
+        .artwork-list-info {
+            flex: 1;
+            min-width: 0
+        }
+
+        .artwork-list-title {
+            color: #FDFBF7;
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .artwork-list-meta {
+            color: rgba(253, 251, 247, .45);
+            font-size: 12px;
+            margin-top: 2px
+        }
+
+        .artwork-list-actions {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0
+        }
+
+        .artwork-edit-form {
+            background: rgba(176, 136, 82, .04);
+            border: 1px solid rgba(176, 136, 82, .2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 10px
+        }
+
+        .cat-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(176, 136, 82, .15);
+            border: 1px solid rgba(176, 136, 82, .3);
+            border-radius: 999px;
+            padding: 6px 14px;
+            color: #C5A478;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .05em;
+            margin: 4px
+        }
+
+        .cat-pill-delete {
+            background: none;
+            border: none;
+            color: rgba(197, 164, 120, .6);
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1;
+            padding: 0;
+            transition: color .15s
+        }
+
+        .cat-pill-delete:hover {
+            color: #f87171
+        }
+
+        .img-preview {
+            width: 100%;
+            max-height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 8px;
+            display: none
+        }
+
+        .img-preview.visible {
+            display: block
+        }
+
+        .admin-tab-btn {
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 1px solid transparent;
+            color: rgba(253, 251, 247, .5);
+            background: transparent;
+            transition: all .2s
+        }
+
+        .admin-tab-btn.active {
+            background: rgba(176, 136, 82, .2);
+            color: #C5A478;
+            border-color: rgba(176, 136, 82, .3)
+        }
+
+        .admin-tab-btn:hover:not(.active) {
+            color: rgba(253, 251, 247, .8);
+            background: rgba(255, 255, 255, .05)
+        }
+
+        #admin-toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 10000;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: all .3s;
+            pointer-events: none
+        }
+
+        #admin-toast.show {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        #admin-toast.success {
+            background: rgba(34, 197, 94, .2);
+            border: 1px solid rgba(34, 197, 94, .4);
+            color: #4ade80
+        }
+
+        #admin-toast.error {
+            background: rgba(220, 38, 38, .2);
+            border: 1px solid rgba(220, 38, 38, .4);
+            color: #f87171
+        }
+
+        .upload-area {
+            border: 2px dashed rgba(176, 136, 82, .3);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color .2s;
+            color: rgba(253, 251, 247, .5);
+            font-size: 13px;
+            display: block
+        }
+
+        .upload-area:hover {
+            border-color: rgba(176, 136, 82, .6);
+            color: rgba(253, 251, 247, .8)
+        }
+
+        .upload-area input[type=file] {
+            display: none
+        }
     </style>
 </head>
-<body class="bg-cream text-charcoal-900 dark:bg-[#0f0d0b] dark:text-cream font-sans antialiased selection:bg-brand-200 selection:text-brand-900 dark:selection:bg-brand-800 dark:selection:text-brand-200">
 
-<!-- Top Announcement Bar -->
-<div class="bg-charcoal-900 text-brand-100 text-xs py-2 px-4 text-center tracking-widest uppercase border-b border-brand-500/20">
-    <span class="inline-block mr-2"><i class="fa-solid fa-gem text-brand-400"></i></span>
-    <span id="announcement-bar-text">Fine Art Studio • High-Res Digital Downloads &amp; Museum-Grade Framed Prints • Worldwide Delivery</span>
-</div>
+<body
+    class="bg-cream text-charcoal-900 dark:bg-[#0f0d0b] dark:text-cream font-sans antialiased selection:bg-brand-200 selection:text-brand-900 dark:selection:bg-brand-800 dark:selection:text-brand-200">
 
-<!-- Navigation Bar -->
-<header class="sticky top-0 z-40 bg-cream/90 dark:bg-[#0f0d0b]/90 backdrop-blur-md border-b border-brand-200/50 dark:border-brand-500/20 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <a href="#" class="flex flex-col items-start group">
-            <span class="cursive-title text-3xl sm:text-4xl text-brand-600 dark:text-brand-400 group-hover:text-brand-500 dark:group-hover:text-brand-300 transition-colors leading-none">ThePrettyArts</span>
-            <span class="text-[10px] tracking-[0.3em] uppercase text-charcoal-800 dark:text-gray-400 font-medium pl-1">by Preeti Kumari</span>
-        </a>
-        <nav class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium text-charcoal-800 dark:text-gray-300">
-            <a href="#gallery" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Gallery</a>
-            <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About Preeti</a>
-            <a href="#commissions" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Custom Order</a>
-            <a href="#faq" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">FAQ</a>
-        </nav>
-        <div class="flex items-center space-x-3">
-            <a href="https://wa.me/4917632610142?text=Hello%20Preeti!%20I%20am%20visiting%20theprettyarts.com%20and%20would%20like%20to%20inquire%20about%20your%20paintings." target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
-                <span class="hidden sm:inline">Direct Chat</span>
+    <!-- Top Announcement Bar -->
+    <div
+        class="bg-charcoal-900 text-brand-100 text-xs py-2 px-4 text-center tracking-widest uppercase border-b border-brand-500/20">
+        <span class="inline-block mr-2"><i class="fa-solid fa-gem text-brand-400"></i></span>
+        <span id="announcement-bar-text">Fine Art Studio • High-Res Digital Downloads &amp; Museum-Grade Framed Prints •
+            Worldwide Delivery</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header
+        class="sticky top-0 z-40 bg-cream/90 dark:bg-[#0f0d0b]/90 backdrop-blur-md border-b border-brand-200/50 dark:border-brand-500/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex flex-col items-start group">
+                <span
+                    class="cursive-title text-3xl sm:text-4xl text-brand-600 dark:text-brand-400 group-hover:text-brand-500 dark:group-hover:text-brand-300 transition-colors leading-none">ThePrettyArts</span>
+                <span
+                    class="text-[10px] tracking-[0.3em] uppercase text-charcoal-800 dark:text-gray-400 font-medium pl-1">by
+                    Preeti Kumari</span>
             </a>
-            <button id="mobile-menu-btn" class="md:hidden p-2 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 focus:outline-none">
-                <i class="fa-solid fa-bars text-xl"></i>
-            </button>
-        </div>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-cream dark:bg-[#1a1714] border-b border-brand-200 dark:border-brand-500/20 px-6 py-4 space-y-3">
-        <a href="#gallery" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">Gallery</a>
-        <a href="#about" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">About Preeti</a>
-        <a href="#commissions" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">Custom Order</a>
-        <a href="#faq" class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">FAQ</a>
-    </div>
-</header>
-
-<!-- Hero Section -->
-<section class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-brand-50/80 via-cream to-cream dark:from-[#110e0c] dark:via-[#0f0d0b] dark:to-[#0f0d0b]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
-            <div class="lg:col-span-6 flex flex-col justify-between text-center lg:text-left py-2 lg:py-4">
-                <!-- Top Header & Text Block -->
-                <div class="space-y-6 sm:space-y-7">
-                    <div>
-                        <span class="cursive-title text-3xl sm:text-4xl text-brand-600 dark:text-brand-400 block mb-2 sm:mb-3">Original Fine Art Studio</span>
-                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-charcoal-900 dark:text-cream leading-[1.2] tracking-tight">
-                            <span id="hero-h1-line1">Transforming Canvas into <span class="whitespace-nowrap">Timeless Emotion</span></span>
-                            <span id="hero-h1-cursive" class="hidden"></span>
-                        </h1>
-                    </div>
-                    <div class="space-y-4 pt-1 text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
-                        <p class="font-editorial text-xl sm:text-2xl italic text-charcoal-800 dark:text-gray-300 leading-relaxed">"Every brushstroke carries a quiet whisper of elegance. Bring home original artwork crafted to elevate your living sanctuary."</p>
-                        <p class="leading-relaxed">Welcome to <strong>ThePrettyArts</strong> by artist <strong>Preeti Kumari</strong>. Discover hand-painted masterpieces available as instant ultra-high-resolution <strong>Digital Downloads</strong> or ready-to-hang <strong>Museum-Grade Framed Prints</strong>.</p>
-                    </div>
-                </div>
-
-                <!-- CTAs Action Block -->
-                <div class="pt-8 lg:pt-9 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                    <a href="#gallery" class="w-full sm:w-auto bg-charcoal-900 dark:bg-brand-600 hover:bg-brand-700 dark:hover:bg-brand-500 text-cream font-medium px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all text-sm tracking-widest uppercase inline-flex items-center justify-center border border-transparent">Explore Gallery</a>
-                    <a href="https://wa.me/4917632610142?text=Hello%20Preeti!%20I%20would%20like%20to%20discuss%20a%20custom%20painting%20commission." target="_blank" class="w-full sm:w-auto border border-brand-500 text-brand-800 dark:text-brand-300 hover:bg-brand-100 dark:hover:bg-brand-900/30 font-medium px-8 py-3.5 rounded-full transition-all text-sm tracking-widest uppercase text-center inline-flex items-center justify-center space-x-2">
-                        <i class="fa-brands fa-whatsapp text-emerald-600 dark:text-emerald-500 text-lg"></i><span>Commission Art</span>
-                    </a>
-                </div>
-
-                <!-- Bottom Stats Anchor Block -->
-                <div class="pt-7 lg:pt-8 mt-7 lg:mt-8 border-t border-brand-200/60 dark:border-brand-500/20 grid grid-cols-3 gap-2 sm:gap-4 text-center lg:text-left">
-                    <div><p class="text-xs uppercase text-gray-500 dark:text-gray-400 font-medium tracking-wider mb-1">Digital Copy</p><p class="text-xs sm:text-sm lg:text-[15px] font-serif font-bold text-brand-800 dark:text-brand-300 whitespace-nowrap">300 DPI Ultra High-Res</p></div>
-                    <div><p class="text-xs uppercase text-gray-500 dark:text-gray-400 font-medium tracking-wider mb-1">Framed Prints</p><p class="text-xs sm:text-sm lg:text-[15px] font-serif font-bold text-brand-800 dark:text-brand-300 whitespace-nowrap">Archival Canvas &amp; Frame</p></div>
-                    <div><p class="text-xs uppercase text-gray-500 dark:text-gray-400 font-medium tracking-wider mb-1">Direct Contact</p><p class="text-xs sm:text-sm lg:text-[15px] font-serif font-bold text-brand-800 dark:text-brand-300 whitespace-nowrap">Chat with Artist</p></div>
-                </div>
-            </div>
-            <div class="lg:col-span-6 relative flex justify-center">
-                <div class="relative w-full max-w-md lg:max-w-none">
-                    <div class="absolute -inset-3 bg-gradient-to-tr from-brand-300 via-brand-100 to-amber-200 dark:from-brand-600/35 dark:via-brand-900/25 dark:to-transparent rounded-3xl blur-2xl opacity-65 ambient-glow-1"></div>
-                    <div class="relative bg-white dark:bg-[#1a1714] p-4 sm:p-6 rounded-2xl shadow-2xl border border-brand-200/80 dark:border-brand-500/20 hero-art-wrapper">
-                        <div class="relative aspect-[4/5] rounded-lg overflow-hidden frame-shadow bg-gray-100 dark:bg-[#0f0d0b] group">
-                            <img id="hero-art-img" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80" alt="Featured Fine Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            <div class="absolute bottom-3 left-3 right-3 bg-cream/90 dark:bg-[#1a1714]/90 backdrop-blur-md p-3 rounded-lg border border-white/60 dark:border-brand-500/30 shadow-md">
-                                <p id="hero-artwork-title" class="cursive-title text-2xl text-brand-700 dark:text-brand-400 leading-none">Whispers of Gold</p>
-                                <p id="hero-artwork-subtitle" class="text-xs text-charcoal-800 dark:text-gray-300 font-medium">Original Acrylic &amp; Gold Leaf on Textured Canvas</p>
-                            </div>
-                        </div>
-                        <div class="absolute -top-4 -right-4 bg-charcoal-900 dark:bg-[#0f0d0b] text-cream py-2 px-4 rounded-full shadow-lg border border-brand-400 dark:border-brand-500/50 text-xs font-serif tracking-widest uppercase flex items-center space-x-1">
-                            <i class="fa-solid fa-crown text-brand-400 mr-1"></i><span>Featured Masterpiece</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Two Purchase Modes Banner -->
-<section class="py-12 bg-brand-900 dark:bg-black text-cream border-y border-brand-700 dark:border-brand-900/50 reveal-init">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-10">
-            <span class="cursive-title text-3xl text-brand-300">How You Can Collect</span>
-            <h2 class="text-2xl sm:text-3xl font-serif mt-1">Two Elegant Ways to Own "ThePrettyArts"</h2>
-            <div class="w-16 h-0.5 bg-brand-400 mx-auto mt-3"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            <div class="mode-card group bg-charcoal-800 dark:bg-[#1a1714] p-8 rounded-2xl border border-brand-500/30 dark:border-brand-500/20 flex flex-col justify-between">
-                <div>
-                    <div class="mode-icon-circle w-12 h-12 rounded-full bg-brand-500/20 text-brand-300 flex items-center justify-center text-xl mb-4 border border-brand-500/40 transition-all duration-300"><i class="fa-solid fa-file-arrow-down"></i></div>
-                    <h3 class="text-xl font-serif text-white mb-2 group-hover:text-brand-300 transition-colors">1. High-Resolution Digital Copy</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-4">Receive full-quality, uncompressed digital files (300 DPI JPG/PNG) directly via WhatsApp or Email. Perfect for custom printing on canvas, acrylic, wallpaper, or digital displays.</p>
-                    <ul class="text-xs text-brand-200 space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Instant delivery to your inbox/chat</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Printable up to large scale (A1 / 24"x36")</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Cost-effective &amp; global availability</li>
-                    </ul>
-                </div>
-                <div class="text-xs text-brand-300 uppercase tracking-widest font-semibold pt-4 border-t border-gray-700 dark:border-brand-500/10">Inquire Price via WhatsApp</div>
-            </div>
-            <div class="mode-card group bg-charcoal-800 dark:bg-[#1a1714] p-8 rounded-2xl border border-brand-500/30 dark:border-brand-500/20 flex flex-col justify-between">
-                <div>
-                    <div class="mode-icon-circle w-12 h-12 rounded-full bg-brand-500/20 text-brand-300 flex items-center justify-center text-xl mb-4 border border-brand-500/40 transition-all duration-300"><i class="fa-solid fa-image"></i></div>
-                    <h3 class="text-xl font-serif text-white mb-2 group-hover:text-brand-300 transition-colors">2. Museum-Grade Framed Print</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-4">Hand-assembled physical framed art delivered securely to your doorstep. Printed on premium archival canvas with durable solid wood frames and anti-glare protective layering.</p>
-                    <ul class="text-xs text-brand-200 space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Multiple framing options (Gold, Black, Oak)</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Ready to hang out of the box</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Premium protective bubble packaging</li>
-                    </ul>
-                </div>
-                <div class="text-xs text-brand-300 uppercase tracking-widest font-semibold pt-4 border-t border-gray-700 dark:border-brand-500/10">Doorstep Delivery Available</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Gallery Section -->
-<section id="gallery" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-init">
-    <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">The Art Collection</span>
-        <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-cream mt-1">Explore Preeti's Artworks</h2>
-        <p class="text-gray-600 dark:text-gray-400 text-sm mt-3">Select any painting to view specifications, frame styling, and directly place an order request on WhatsApp.</p>
-        <div class="w-12 h-0.5 bg-brand-500 mx-auto mt-4"></div>
-    </div>
-    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-12" id="filter-buttons">
-        <div class="text-gray-400 dark:text-gray-500 text-sm animate-pulse">Loading categories...</div>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
-        <div class="bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md animate-pulse"><div class="aspect-[4/5] bg-gray-200 dark:bg-gray-800"></div><div class="p-5 space-y-3"><div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div><div class="h-3 bg-gray-100 dark:bg-gray-800 rounded w-1/2"></div></div></div>
-        <div class="bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md animate-pulse hidden sm:block"><div class="aspect-[4/5] bg-gray-200 dark:bg-gray-800"></div><div class="p-5 space-y-3"><div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div><div class="h-3 bg-gray-100 dark:bg-gray-800 rounded w-1/2"></div></div></div>
-        <div class="bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md animate-pulse hidden lg:block"><div class="aspect-[4/5] bg-gray-200 dark:bg-gray-800"></div><div class="p-5 space-y-3"><div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div><div class="h-3 bg-gray-100 dark:bg-gray-800 rounded w-1/2"></div></div></div>
-    </div>
-</section>
-
-
-<!-- About Preeti Kumari Section -->
-<section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-init">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-5">
-            <div class="relative">
-                <div class="absolute -inset-3 bg-brand-200/60 dark:bg-brand-500/20 rounded-3xl -rotate-2"></div>
-                <div class="relative bg-white dark:bg-[#1a1714] p-4 rounded-2xl shadow-xl border border-brand-200 dark:border-brand-500/20">
-                    <img src="assets/preeti-kumari.jpeg" alt="Preeti Kumari Artist Portrait" class="w-full h-auto rounded-xl object-cover aspect-[4/5] filter contrast-[1.02]">
-                    <div class="mt-4 text-center">
-                        <span class="cursive-title text-3xl text-brand-600 dark:text-brand-400">Preeti Kumari</span>
-                        <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Founder &amp; Lead Artist at ThePrettyArts</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="lg:col-span-7 space-y-6">
-            <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Meet the Creator</span>
-            <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-cream leading-tight">"Art is not what I see, but what I invite others to feel."</h2>
-            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Welcome! I am <strong>Preeti Kumari</strong>, the artist behind <strong>ThePrettyArts</strong>. My creative journey is rooted in capturing quiet moments, tactile textures, and vibrant emotional landscapes. Through rich acrylics, delicate oils, and metallic accents, each piece is born out of a passion for atmospheric elegance.</p>
-            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Whether you are an art collector seeking a physical archival framed print for your living room wall or a designer looking for ultra-high-resolution digital artwork downloads, my studio ensures each artwork brings warmth and luxury into your space.</p>
-            <div class="pt-4 grid grid-cols-2 gap-4 text-center sm:text-left">
-                <div class="bg-brand-50 dark:bg-brand-900/40 p-4 rounded-xl border border-brand-200/60 dark:border-brand-500/20"><span class="text-2xl font-serif font-bold text-brand-700 dark:text-brand-300 block">50+</span><span class="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider">Original Paintings</span></div>
-                <div class="bg-brand-50 dark:bg-brand-900/40 p-4 rounded-xl border border-brand-200/60 dark:border-brand-500/20"><span class="text-2xl font-serif font-bold text-brand-700 dark:text-brand-300 block">100%</span><span class="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider">Satisfaction Guaranteed</span></div>
-            </div>
-            <div class="pt-4">
-                <a href="https://wa.me/4917632610142?text=Hello%20Preeti!%20I%20read%20your%20story%20on%20theprettyarts.com%20and%20would%20love%20to%20connect." target="_blank" class="inline-flex items-center space-x-2 text-brand-700 dark:text-brand-400 font-semibold hover:text-brand-900 dark:hover:text-brand-300 transition-colors group">
-                    <span class="underline underline-offset-4">Chat Directly with Preeti on WhatsApp</span>
-                    <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+            <nav
+                class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium text-charcoal-800 dark:text-gray-300">
+                <a href="#gallery" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Gallery</a>
+                <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About
+                    Preeti</a>
+                <a href="#commissions" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Custom
+                    Order</a>
+                <a href="#faq" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">FAQ</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <a href="https://wa.me/4917632610142?text=Hello%20Preeti!%20I%20am%20visiting%20theprettyarts.com%20and%20would%20like%20to%20inquire%20about%20your%20paintings."
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center space-x-2 bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="hidden sm:inline">Direct Chat</span>
                 </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Custom Commission Builder Section -->
-<section id="commissions" class="py-20 bg-brand-50 dark:bg-[#0f0d0b] border-y border-brand-200/60 dark:border-brand-500/20 reveal-init">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
-            <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Tailored Fine Art</span>
-            <h2 class="text-3xl font-serif text-charcoal-900 dark:text-cream">Request a Custom Painting</h2>
-            <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">Have a specific palette or wall dimension in mind? Customize your artwork with Preeti Kumari directly over WhatsApp.</p>
-        </div>
-        <div class="bg-white dark:bg-[#1a1714] p-6 sm:p-10 rounded-3xl shadow-xl border border-brand-200 dark:border-brand-500/20 space-y-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div><label class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Your Full Name</label><input type="text" id="comm-name" placeholder="e.g. Sophia Sharma" class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"></div>
-                <div><label class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Preferred Art Style</label><select id="comm-style" class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"><option>Abstract &amp; Texture</option><option>Floral &amp; Botanical</option><option>Landscape / Nature</option><option>Custom Portrait</option></select></div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div><label class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Art Format</label><select id="comm-format" class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"><option>Framed Canvas Print</option><option>Original Handmade Painting</option><option>Digital High-Res Download</option></select></div>
-                <div><label class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Estimated Canvas Size</label><select id="comm-size" class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"><option>Medium (18 x 24 inches)</option><option>Large (24 x 36 inches)</option><option>Statement Oversized (36 x 48 inches)</option><option>Custom Dimensions</option></select></div>
-            </div>
-            <div><label class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Color Palette &amp; Notes</label><textarea id="comm-notes" rows="3" placeholder="Mention your preferred wall color, room lighting, or design inspirations..." class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"></textarea></div>
-            <button onclick="sendCommissionWhatsApp()" class="w-full bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white font-medium py-4 rounded-xl text-sm uppercase tracking-widest transition-all shadow-lg flex items-center justify-center space-x-2"><i class="fa-brands fa-whatsapp text-xl"></i><span>Send Commission Details to WhatsApp</span></button>
-        </div>
-    </div>
-</section>
-
-<!-- Collector Reviews Section -->
-<section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-init">
-    <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Words from Collectors</span>
-        <h2 class="text-3xl font-serif text-charcoal-900 dark:text-cream mt-1">Lover of ThePrettyArts</h2>
-        <div class="w-12 h-0.5 bg-brand-500 mx-auto mt-3"></div>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="review-card group bg-white dark:bg-[#1a1714] p-6 rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-md flex flex-col justify-between"><div><div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="font-editorial text-lg text-charcoal-800 dark:text-gray-300 italic">"The framed print of 'Whispers of Gold' arrived impeccably packaged. The gold leaf textures look breathtaking under our gallery lighting."</p></div><div class="mt-6 pt-4 border-t border-brand-100 dark:border-brand-500/20"><p class="text-xs font-bold text-charcoal-900 dark:text-cream">Ananya R.</p><p class="text-[10px] text-gray-500 dark:text-gray-400 uppercase">Mumbai, India</p></div></div>
-        <div class="review-card group bg-white dark:bg-[#1a1714] p-6 rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-md flex flex-col justify-between"><div><div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="font-editorial text-lg text-charcoal-800 dark:text-gray-300 italic">"I bought the digital high-res copy and printed it on canvas locally. Preeti sent the file over WhatsApp instantly. So helpful!"</p></div><div class="mt-6 pt-4 border-t border-brand-100 dark:border-brand-500/20"><p class="text-xs font-bold text-charcoal-900 dark:text-cream">Vikram S.</p><p class="text-[10px] text-gray-500 dark:text-gray-400 uppercase">Bangalore, India</p></div></div>
-        <div class="review-card group bg-white dark:bg-[#1a1714] p-6 rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-md flex flex-col justify-between"><div><div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="font-editorial text-lg text-charcoal-800 dark:text-gray-300 italic">"Commissioned a landscape painting for my office. Preeti understood exactly what I wanted — the result was beyond my imagination."</p></div><div class="mt-6 pt-4 border-t border-brand-100 dark:border-brand-500/20"><p class="text-xs font-bold text-charcoal-900 dark:text-cream">Meera T.</p><p class="text-[10px] text-gray-500 dark:text-gray-400 uppercase">Delhi, India</p></div></div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section id="faq" class="py-20 bg-brand-50 dark:bg-black border-t border-brand-200/60 dark:border-brand-500/20 reveal-init">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Questions &amp; Answers</span>
-            <h2 class="text-3xl font-serif text-charcoal-900 dark:text-cream mt-1">Frequently Asked</h2>
-            <div class="w-12 h-0.5 bg-brand-500 mx-auto mt-3"></div>
-        </div>
-        <div class="space-y-4" id="faq-accordion">
-            <div class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>What formats do I receive with a Digital Copy?</span><i class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">You will receive full-resolution JPG and PNG files (300 DPI) via WhatsApp or Email within minutes of payment. The files are print-ready for sizes up to 24"x36" (A1).</div></div>
-            <div class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>How long does framed print delivery take?</span><i class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Framed prints are handcrafted and delivered within 7-14 business days across India. International orders may take 3-4 weeks with full tracking.</div></div>
-            <div class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>Can I request a custom painting of a specific scene or photo?</span><i class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Absolutely! Use the Custom Commission form above or contact Preeti directly on WhatsApp with reference images, preferred style, size, and color palette. Turnaround for commissions is typically 2-4 weeks.</div></div>
-            <div class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden"><button class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>What payment methods are accepted?</span><i class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button><div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Payments are accepted via UPI, bank transfer, PayPal, and international wire. Details are shared directly via WhatsApp after inquiry confirmation.</div></div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-charcoal-900 dark:bg-[#0a0a0a] text-brand-200 py-12 border-t border-brand-800 dark:border-brand-500/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="cursive-title text-4xl text-brand-400">ThePrettyArts</span>
-        <p class="text-xs uppercase tracking-[0.3em] text-brand-500 mt-1">by Preeti Kumari</p>
-        <p class="text-gray-500 text-xs mt-4">© 2025 ThePrettyArts. All Rights Reserved. Artwork is protected under copyright law.</p>
-    </div>
-</footer>
-
-<!-- Art Detail Modal -->
-<div id="art-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-charcoal-900/90 dark:bg-black/90 backdrop-blur-sm p-4">
-    <div class="bg-cream dark:bg-[#1a1714] rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative border border-brand-200 dark:border-brand-500/20">
-        <button onclick="closeArtModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-charcoal-900/70 dark:bg-black/70 hover:bg-charcoal-900 dark:hover:bg-black text-white rounded-full flex items-center justify-center text-sm transition-all"><i class="fa-solid fa-times"></i></button>
-        <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="relative aspect-square lg:aspect-auto lg:min-h-[450px] bg-gray-100 dark:bg-[#0f0d0b] rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none overflow-hidden"><img id="modal-img" src="" alt="" class="w-full h-full object-cover"></div>
-            <div class="p-8 lg:p-10 flex flex-col justify-between">
-                <div>
-                    <span id="modal-category" class="inline-block bg-brand-100 dark:bg-brand-900/40 text-brand-800 dark:text-brand-300 text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-brand-300 dark:border-brand-500/40 mb-3"></span>
-                    <h3 id="modal-title" class="font-serif text-3xl text-charcoal-900 dark:text-cream mb-1"></h3>
-                    <p id="modal-medium" class="text-sm text-gray-500 dark:text-gray-400 italic mb-4"></p>
-                    <p id="modal-description" class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-6"></p>
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="bg-brand-50 dark:bg-[#0f0d0b] p-3 rounded-xl border border-brand-200/60 dark:border-brand-500/20"><p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-0.5">Digital Copy</p><p class="text-sm font-semibold text-brand-800 dark:text-brand-300">300 DPI Available</p></div>
-                        <div class="bg-brand-50 dark:bg-[#0f0d0b] p-3 rounded-xl border border-brand-200/60 dark:border-brand-500/20"><p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-0.5">Framed Print</p><p class="text-sm font-semibold text-brand-800 dark:text-brand-300">3 Sizes Available</p></div>
-                    </div>
-                </div>
-                <a id="modal-wa-btn" href="#" target="_blank" class="block w-full bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white font-medium py-3.5 rounded-xl text-sm uppercase tracking-widest text-center transition-all flex items-center justify-center space-x-2"><i class="fa-brands fa-whatsapp text-xl"></i><span>Inquire on WhatsApp</span></a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ═══ ADMIN PANEL — Hidden, accessible only via /#admin ═══ -->
-<div id="admin-panel">
-    <div id="admin-toast"></div>
-
-    <!-- LOGIN SCREEN -->
-    <div id="admin-login" class="admin-login-wrap">
-        <div class="admin-login-card">
-            <div style="text-align:center;margin-bottom:32px;">
-                <span style="font-family:'Great Vibes',cursive;font-size:2.2rem;color:#B08852;">ThePrettyArts</span>
-                <p style="color:rgba(253,251,247,.35);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-top:4px;">Studio Admin</p>
-                <div style="width:40px;height:1px;background:#B08852;margin:16px auto 0;"></div>
-            </div>
-            <div class="admin-field">
-                <label class="admin-label">Email Address</label>
-                <input id="admin-email" type="email" class="admin-input" placeholder="your@email.com" autocomplete="email">
-            </div>
-            <div class="admin-field">
-                <label class="admin-label">Password</label>
-                <input id="admin-password" type="password" class="admin-input" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')adminLogin()">
-            </div>
-            <div id="admin-login-error" style="display:none;background:rgba(220,38,38,.15);border:1px solid rgba(220,38,38,.3);border-radius:8px;padding:10px 14px;color:#f87171;font-size:12px;margin-bottom:14px;"></div>
-            <button id="admin-login-btn" class="admin-btn-gold" onclick="adminLogin()">Enter Studio</button>
-            <p style="text-align:center;color:rgba(253,251,247,.18);font-size:11px;margin-top:20px;">This page is not linked from the public site.</p>
-        </div>
-    </div>
-
-    <!-- DASHBOARD -->
-    <div id="admin-dashboard" class="admin-dashboard">
-        <div class="admin-header">
-            <div style="display:flex;align-items:center;gap:12px;">
-                <span style="font-family:'Great Vibes',cursive;font-size:1.6rem;color:#B08852;">ThePrettyArts</span>
-                <span style="color:rgba(253,251,247,.3);font-size:12px;letter-spacing:.15em;text-transform:uppercase;">Admin Studio</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:12px;">
-                <span id="admin-user-email" style="color:rgba(253,251,247,.4);font-size:12px;"></span>
-                <button onclick="adminLogout()" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(253,251,247,.6);border-radius:8px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.05em;transition:all .2s;" onmouseover="this.style.background='rgba(255,255,255,.12)'" onmouseout="this.style.background='rgba(255,255,255,.07)'">
-                    <i class="fa-solid fa-right-from-bracket" style="margin-right:6px;"></i>Sign Out
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-cream dark:bg-[#1a1714] border-b border-brand-200 dark:border-brand-500/20 px-6 py-4 space-y-3">
+            <a href="#gallery"
+                class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">Gallery</a>
+            <a href="#about"
+                class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">About
+                Preeti</a>
+            <a href="#commissions"
+                class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">Custom
+                Order</a>
+            <a href="#faq"
+                class="mobile-link block text-sm uppercase tracking-wider py-1 text-charcoal-800 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400">FAQ</a>
+        </div>
+    </header>
 
-        <!-- Tabs -->
-        <div style="background:#1a1714;border-bottom:1px solid rgba(176,136,82,.15);padding:0 32px;">
-            <div style="display:flex;gap:4px;padding:12px 0;max-width:1000px;margin:0 auto;">
-                <button class="admin-tab-btn active" id="tab-btn-content" onclick="showTab('content')"><i class="fa-solid fa-pen-to-square" style="margin-right:6px;"></i>Site Content</button>
-                <button class="admin-tab-btn" id="tab-btn-artworks" onclick="showTab('artworks')"><i class="fa-solid fa-images" style="margin-right:6px;"></i>Artworks</button>
-                <button class="admin-tab-btn" id="tab-btn-categories" onclick="showTab('categories')"><i class="fa-solid fa-tags" style="margin-right:6px;"></i>Categories</button>
+    <!-- Hero Section -->
+    <section
+        class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-brand-50/80 via-cream to-cream dark:from-[#110e0c] dark:via-[#0f0d0b] dark:to-[#0f0d0b]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+                <div class="lg:col-span-6 flex flex-col justify-between text-center lg:text-left py-2 lg:py-4">
+                    <!-- Top Header & Text Block -->
+                    <div class="space-y-6 sm:space-y-7">
+                        <div>
+                            <span
+                                class="cursive-title text-3xl sm:text-4xl text-brand-600 dark:text-brand-400 block mb-2 sm:mb-3">Original
+                                Fine Art Studio</span>
+                            <h1
+                                class="text-3xl sm:text-4xl lg:text-5xl font-serif text-charcoal-900 dark:text-cream leading-[1.2] tracking-tight">
+                                <span id="hero-h1-line1">Transforming Canvas into <span
+                                        class="whitespace-nowrap">Timeless Emotion</span></span>
+                                <span id="hero-h1-cursive" class="hidden"></span>
+                            </h1>
+                        </div>
+                        <div
+                            class="space-y-4 pt-1 text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
+                            <p
+                                class="font-editorial text-xl sm:text-2xl italic text-charcoal-800 dark:text-gray-300 leading-relaxed">
+                                "Every brushstroke carries a quiet whisper of elegance. Bring home original artwork
+                                crafted to elevate your living sanctuary."</p>
+                            <p class="leading-relaxed">Welcome to <strong>ThePrettyArts</strong> by artist
+                                <strong>Preeti Kumari</strong>. Discover hand-painted masterpieces available as instant
+                                ultra-high-resolution <strong>Digital Downloads</strong> or ready-to-hang
+                                <strong>Museum-Grade Framed Prints</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- CTAs Action Block -->
+                    <div
+                        class="pt-8 lg:pt-9 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#gallery"
+                            class="w-full sm:w-auto bg-charcoal-900 dark:bg-brand-600 hover:bg-brand-700 dark:hover:bg-brand-500 text-cream font-medium px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all text-sm tracking-widest uppercase inline-flex items-center justify-center border border-transparent">Explore
+                            Gallery</a>
+                        <a href="https://wa.me/4917632610142?text=Hello%20Preeti!%20I%20would%20like%20to%20discuss%20a%20custom%20painting%20commission."
+                            target="_blank"
+                            class="w-full sm:w-auto border border-brand-500 text-brand-800 dark:text-brand-300 hover:bg-brand-100 dark:hover:bg-brand-900/30 font-medium px-8 py-3.5 rounded-full transition-all text-sm tracking-widest uppercase text-center inline-flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-600 dark:text-emerald-500 text-lg"></i><span>Commission
+                                Art</span>
+                        </a>
+                    </div>
+
+                    <!-- Bottom Stats Anchor Block -->
+                    <div
+                        class="pt-7 lg:pt-8 mt-7 lg:mt-8 border-t border-brand-200/60 dark:border-brand-500/20 grid grid-cols-3 gap-2 sm:gap-4 text-center lg:text-left">
+                        <div>
+                            <p
+                                class="text-xs uppercase text-gray-500 dark:text-gray-400 font-medium tracking-wider mb-1">
+                                Digital Copy</p>
+                            <p
+                                class="text-xs sm:text-sm lg:text-[15px] font-serif font-bold text-brand-800 dark:text-brand-300 whitespace-nowrap">
+                                300 DPI Ultra High-Res</p>
+                        </div>
+                        <div>
+                            <p
+                                class="text-xs uppercase text-gray-500 dark:text-gray-400 font-medium tracking-wider mb-1">
+                                Framed Prints</p>
+                            <p
+                                class="text-xs sm:text-sm lg:text-[15px] font-serif font-bold text-brand-800 dark:text-brand-300 whitespace-nowrap">
+                                Archival Canvas &amp; Frame</p>
+                        </div>
+                        <div>
+                            <p
+                                class="text-xs uppercase text-gray-500 dark:text-gray-400 font-medium tracking-wider mb-1">
+                                Direct Contact</p>
+                            <p
+                                class="text-xs sm:text-sm lg:text-[15px] font-serif font-bold text-brand-800 dark:text-brand-300 whitespace-nowrap">
+                                Chat with Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 relative flex justify-center">
+                    <div class="relative w-full max-w-md lg:max-w-none">
+                        <div
+                            class="absolute -inset-3 bg-gradient-to-tr from-brand-300 via-brand-100 to-amber-200 dark:from-brand-600/35 dark:via-brand-900/25 dark:to-transparent rounded-3xl blur-2xl opacity-65 ambient-glow-1">
+                        </div>
+                        <div
+                            class="relative bg-white dark:bg-[#1a1714] p-4 sm:p-6 rounded-2xl shadow-2xl border border-brand-200/80 dark:border-brand-500/20 hero-art-wrapper">
+                            <div
+                                class="relative aspect-[4/5] rounded-lg overflow-hidden frame-shadow bg-gray-100 dark:bg-[#0f0d0b] group">
+                                <img id="hero-art-img"
+                                    src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80"
+                                    alt="Featured Fine Art"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div
+                                    class="absolute bottom-3 left-3 right-3 bg-cream/90 dark:bg-[#1a1714]/90 backdrop-blur-md p-3 rounded-lg border border-white/60 dark:border-brand-500/30 shadow-md">
+                                    <p id="hero-artwork-title"
+                                        class="cursive-title text-2xl text-brand-700 dark:text-brand-400 leading-none">
+                                        Whispers of Gold</p>
+                                    <p id="hero-artwork-subtitle"
+                                        class="text-xs text-charcoal-800 dark:text-gray-300 font-medium">Original
+                                        Acrylic &amp; Gold Leaf on Textured Canvas</p>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute -top-4 -right-4 bg-charcoal-900 dark:bg-[#0f0d0b] text-cream py-2 px-4 rounded-full shadow-lg border border-brand-400 dark:border-brand-500/50 text-xs font-serif tracking-widest uppercase flex items-center space-x-1">
+                                <i class="fa-solid fa-crown text-brand-400 mr-1"></i><span>Featured Masterpiece</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Purchase Modes Banner -->
+    <section
+        class="py-12 bg-brand-900 dark:bg-black text-cream border-y border-brand-700 dark:border-brand-900/50 reveal-init">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="cursive-title text-3xl text-brand-300">How You Can Collect</span>
+                <h2 class="text-2xl sm:text-3xl font-serif mt-1">Two Elegant Ways to Own "ThePrettyArts"</h2>
+                <div class="w-16 h-0.5 bg-brand-400 mx-auto mt-3"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <div
+                    class="mode-card group bg-charcoal-800 dark:bg-[#1a1714] p-8 rounded-2xl border border-brand-500/30 dark:border-brand-500/20 flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="mode-icon-circle w-12 h-12 rounded-full bg-brand-500/20 text-brand-300 flex items-center justify-center text-xl mb-4 border border-brand-500/40 transition-all duration-300">
+                            <i class="fa-solid fa-file-arrow-down"></i></div>
+                        <h3 class="text-xl font-serif text-white mb-2 group-hover:text-brand-300 transition-colors">1.
+                            High-Resolution Digital Copy</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">Receive full-quality, uncompressed digital
+                            files (300 DPI JPG/PNG) directly via WhatsApp or Email. Perfect for custom printing on
+                            canvas, acrylic, wallpaper, or digital displays.</p>
+                        <ul class="text-xs text-brand-200 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Instant
+                                delivery to your inbox/chat</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>
+                                Printable up to large scale (A1 / 24"x36")</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>
+                                Cost-effective &amp; global availability</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="text-xs text-brand-300 uppercase tracking-widest font-semibold pt-4 border-t border-gray-700 dark:border-brand-500/10">
+                        Inquire Price via WhatsApp</div>
+                </div>
+                <div
+                    class="mode-card group bg-charcoal-800 dark:bg-[#1a1714] p-8 rounded-2xl border border-brand-500/30 dark:border-brand-500/20 flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="mode-icon-circle w-12 h-12 rounded-full bg-brand-500/20 text-brand-300 flex items-center justify-center text-xl mb-4 border border-brand-500/40 transition-all duration-300">
+                            <i class="fa-solid fa-image"></i></div>
+                        <h3 class="text-xl font-serif text-white mb-2 group-hover:text-brand-300 transition-colors">2.
+                            Museum-Grade Framed Print</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">Hand-assembled physical framed art
+                            delivered securely to your doorstep. Printed on premium archival canvas with durable solid
+                            wood frames and anti-glare protective layering.</p>
+                        <ul class="text-xs text-brand-200 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Multiple
+                                framing options (Gold, Black, Oak)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Ready to
+                                hang out of the box</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i> Premium
+                                protective bubble packaging</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="text-xs text-brand-300 uppercase tracking-widest font-semibold pt-4 border-t border-gray-700 dark:border-brand-500/10">
+                        Doorstep Delivery Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-init">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">The Art Collection</span>
+            <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-cream mt-1">Explore Preeti's Artworks
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mt-3">Select any painting to view specifications, frame
+                styling, and directly place an order request on WhatsApp.</p>
+            <div class="w-12 h-0.5 bg-brand-500 mx-auto mt-4"></div>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-12" id="filter-buttons">
+            <div class="text-gray-400 dark:text-gray-500 text-sm animate-pulse">Loading categories...</div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+            <div
+                class="bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md animate-pulse">
+                <div class="aspect-[4/5] bg-gray-200 dark:bg-gray-800"></div>
+                <div class="p-5 space-y-3">
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
+                    <div class="h-3 bg-gray-100 dark:bg-gray-800 rounded w-1/2"></div>
+                </div>
+            </div>
+            <div
+                class="bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md animate-pulse hidden sm:block">
+                <div class="aspect-[4/5] bg-gray-200 dark:bg-gray-800"></div>
+                <div class="p-5 space-y-3">
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
+                    <div class="h-3 bg-gray-100 dark:bg-gray-800 rounded w-1/2"></div>
+                </div>
+            </div>
+            <div
+                class="bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md animate-pulse hidden lg:block">
+                <div class="aspect-[4/5] bg-gray-200 dark:bg-gray-800"></div>
+                <div class="p-5 space-y-3">
+                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
+                    <div class="h-3 bg-gray-100 dark:bg-gray-800 rounded w-1/2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Preeti Kumari Section -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-init">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5">
+                <div class="relative">
+                    <div class="absolute -inset-3 bg-brand-200/60 dark:bg-brand-500/20 rounded-3xl -rotate-2"></div>
+                    <div
+                        class="relative bg-white dark:bg-[#1a1714] p-4 rounded-2xl shadow-xl border border-brand-200 dark:border-brand-500/20">
+                        <img src="assets/preeti-kumari.jpeg" alt="Preeti Kumari Artist Portrait"
+                            class="w-full h-auto rounded-xl object-cover aspect-[4/5] filter contrast-[1.02]">
+                        <div class="mt-4 text-center">
+                            <span class="cursive-title text-3xl text-brand-600 dark:text-brand-400">Preeti Kumari</span>
+                            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Founder &amp;
+                                Lead Artist at ThePrettyArts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-7 space-y-6">
+                <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Meet the Creator</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-cream leading-tight">"Art is not
+                    what I see, but what I invite others to feel."</h2>
+                <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Welcome! I am
+                    <strong>Preeti Kumari</strong>, the artist behind <strong>ThePrettyArts</strong>. My creative
+                    journey is rooted in capturing quiet moments, tactile textures, and vibrant emotional landscapes.
+                    Through rich acrylics, delicate oils, and metallic accents, each piece is born out of a passion for
+                    atmospheric elegance.</p>
+                <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Whether you are an art
+                    collector seeking a physical archival framed print for your living room wall or a designer looking
+                    for ultra-high-resolution digital artwork downloads, my studio ensures each artwork brings warmth
+                    and luxury into your space.</p>
+                <div class="pt-4 grid grid-cols-2 gap-4 text-center sm:text-left">
+                    <div
+                        class="bg-brand-50 dark:bg-brand-900/40 p-4 rounded-xl border border-brand-200/60 dark:border-brand-500/20">
+                        <span
+                            class="text-2xl font-serif font-bold text-brand-700 dark:text-brand-300 block">50+</span><span
+                            class="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider">Original
+                            Paintings</span></div>
+                    <div
+                        class="bg-brand-50 dark:bg-brand-900/40 p-4 rounded-xl border border-brand-200/60 dark:border-brand-500/20">
+                        <span
+                            class="text-2xl font-serif font-bold text-brand-700 dark:text-brand-300 block">100%</span><span
+                            class="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider">Satisfaction
+                            Guaranteed</span></div>
+                </div>
+                <div class="pt-4">
+                    <a href="https://wa.me/4917632610142?text=Hello%20Preeti!%20I%20read%20your%20story%20on%20theprettyarts.com%20and%20would%20love%20to%20connect."
+                        target="_blank"
+                        class="inline-flex items-center space-x-2 text-brand-700 dark:text-brand-400 font-semibold hover:text-brand-900 dark:hover:text-brand-300 transition-colors group">
+                        <span class="underline underline-offset-4">Chat Directly with Preeti on WhatsApp</span>
+                        <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Commission Builder Section -->
+    <section id="commissions"
+        class="py-20 bg-brand-50 dark:bg-[#0f0d0b] border-y border-brand-200/60 dark:border-brand-500/20 reveal-init">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Tailored Fine Art</span>
+                <h2 class="text-3xl font-serif text-charcoal-900 dark:text-cream">Request a Custom Painting</h2>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">Have a specific palette or wall dimension in
+                    mind? Customize your artwork with Preeti Kumari directly over WhatsApp.</p>
+            </div>
+            <div
+                class="bg-white dark:bg-[#1a1714] p-6 sm:p-10 rounded-3xl shadow-xl border border-brand-200 dark:border-brand-500/20 space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div><label
+                            class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Your
+                            Full Name</label><input type="text" id="comm-name" placeholder="e.g. Sophia Sharma"
+                            class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400">
+                    </div>
+                    <div><label
+                            class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Preferred
+                            Art Style</label><select id="comm-style"
+                            class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400">
+                            <option>Abstract &amp; Texture</option>
+                            <option>Floral &amp; Botanical</option>
+                            <option>Landscape / Nature</option>
+                            <option>Custom Portrait</option>
+                        </select></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div><label
+                            class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Art
+                            Format</label><select id="comm-format"
+                            class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400">
+                            <option>Framed Canvas Print</option>
+                            <option>Original Handmade Painting</option>
+                            <option>Digital High-Res Download</option>
+                        </select></div>
+                    <div><label
+                            class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Estimated
+                            Canvas Size</label><select id="comm-size"
+                            class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400">
+                            <option>Medium (18 x 24 inches)</option>
+                            <option>Large (24 x 36 inches)</option>
+                            <option>Statement Oversized (36 x 48 inches)</option>
+                            <option>Custom Dimensions</option>
+                        </select></div>
+                </div>
+                <div><label
+                        class="block text-xs uppercase tracking-widest text-gray-700 dark:text-gray-300 font-semibold mb-2">Color
+                        Palette &amp; Notes</label><textarea id="comm-notes" rows="3"
+                        placeholder="Mention your preferred wall color, room lighting, or design inspirations..."
+                        class="w-full bg-cream dark:bg-black border border-brand-300 dark:border-brand-500/40 dark:text-cream rounded-xl p-3 text-sm focus:outline-none focus:border-brand-500 dark:focus:border-brand-400"></textarea>
+                </div>
+                <button onclick="sendCommissionWhatsApp()"
+                    class="w-full bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white font-medium py-4 rounded-xl text-sm uppercase tracking-widest transition-all shadow-lg flex items-center justify-center space-x-2"><i
+                        class="fa-brands fa-whatsapp text-xl"></i><span>Send Commission Details to
+                        WhatsApp</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collector Reviews Section -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-init">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Words from Collectors</span>
+            <h2 class="text-3xl font-serif text-charcoal-900 dark:text-cream mt-1">Lover of ThePrettyArts</h2>
+            <div class="w-12 h-0.5 bg-brand-500 mx-auto mt-3"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+                class="review-card group bg-white dark:bg-[#1a1714] p-6 rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="font-editorial text-lg text-charcoal-800 dark:text-gray-300 italic">"The framed print of
+                        'Whispers of Gold' arrived impeccably packaged. The gold leaf textures look breathtaking under
+                        our gallery lighting."</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-brand-100 dark:border-brand-500/20">
+                    <p class="text-xs font-bold text-charcoal-900 dark:text-cream">Ananya R.</p>
+                    <p class="text-[10px] text-gray-500 dark:text-gray-400 uppercase">Mumbai, India</p>
+                </div>
+            </div>
+            <div
+                class="review-card group bg-white dark:bg-[#1a1714] p-6 rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="font-editorial text-lg text-charcoal-800 dark:text-gray-300 italic">"I bought the digital
+                        high-res copy and printed it on canvas locally. Preeti sent the file over WhatsApp instantly. So
+                        helpful!"</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-brand-100 dark:border-brand-500/20">
+                    <p class="text-xs font-bold text-charcoal-900 dark:text-cream">Vikram S.</p>
+                    <p class="text-[10px] text-gray-500 dark:text-gray-400 uppercase">Bangalore, India</p>
+                </div>
+            </div>
+            <div
+                class="review-card group bg-white dark:bg-[#1a1714] p-6 rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 text-xs mb-3 space-x-1"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="font-editorial text-lg text-charcoal-800 dark:text-gray-300 italic">"Commissioned a
+                        landscape painting for my office. Preeti understood exactly what I wanted — the result was
+                        beyond my imagination."</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-brand-100 dark:border-brand-500/20">
+                    <p class="text-xs font-bold text-charcoal-900 dark:text-cream">Meera T.</p>
+                    <p class="text-[10px] text-gray-500 dark:text-gray-400 uppercase">Delhi, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq"
+        class="py-20 bg-brand-50 dark:bg-black border-t border-brand-200/60 dark:border-brand-500/20 reveal-init">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="cursive-title text-4xl text-brand-600 dark:text-brand-400">Questions &amp; Answers</span>
+                <h2 class="text-3xl font-serif text-charcoal-900 dark:text-cream mt-1">Frequently Asked</h2>
+                <div class="w-12 h-0.5 bg-brand-500 mx-auto mt-3"></div>
+            </div>
+            <div class="space-y-4" id="faq-accordion">
+                <div
+                    class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden">
+                    <button
+                        class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>What
+                            formats do I receive with a Digital Copy?</span><i
+                            class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        You will receive full-resolution JPG and PNG files (300 DPI) via WhatsApp or Email within
+                        minutes of payment. The files are print-ready for sizes up to 24"x36" (A1).</div>
+                </div>
+                <div
+                    class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden">
+                    <button
+                        class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>How
+                            long does framed print delivery take?</span><i
+                            class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Framed prints are handcrafted and delivered within 7-14 business days across India.
+                        International orders may take 3-4 weeks with full tracking.</div>
+                </div>
+                <div
+                    class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden">
+                    <button
+                        class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>Can
+                            I request a custom painting of a specific scene or photo?</span><i
+                            class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Absolutely! Use the Custom Commission form above or contact Preeti directly on WhatsApp with
+                        reference images, preferred style, size, and color palette. Turnaround for commissions is
+                        typically 2-4 weeks.</div>
+                </div>
+                <div
+                    class="faq-item bg-white dark:bg-[#1a1714] rounded-2xl border border-brand-200/80 dark:border-brand-500/20 shadow-sm overflow-hidden">
+                    <button
+                        class="faq-toggle w-full text-left p-5 flex justify-between items-center font-medium text-charcoal-900 dark:text-cream text-sm"><span>What
+                            payment methods are accepted?</span><i
+                            class="fa-solid fa-chevron-down text-brand-500 dark:text-brand-400 text-xs transition-transform"></i></button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Payments are accepted via UPI, bank transfer, PayPal, and international wire. Details are shared
+                        directly via WhatsApp after inquiry confirmation.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="bg-charcoal-900 dark:bg-[#0a0a0a] text-brand-200 py-12 border-t border-brand-800 dark:border-brand-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="cursive-title text-4xl text-brand-400">ThePrettyArts</span>
+            <p class="text-xs uppercase tracking-[0.3em] text-brand-500 mt-1">by Preeti Kumari</p>
+            <p class="text-gray-500 text-xs mt-4">© 2025 ThePrettyArts. All Rights Reserved. Artwork is protected under
+                copyright law.</p>
+        </div>
+    </footer>
+
+    <!-- Art Detail Modal -->
+    <div id="art-modal"
+        class="fixed inset-0 z-50 hidden items-center justify-center bg-charcoal-900/90 dark:bg-black/90 backdrop-blur-sm p-4">
+        <div
+            class="bg-cream dark:bg-[#1a1714] rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative border border-brand-200 dark:border-brand-500/20">
+            <button onclick="closeArtModal()"
+                class="absolute top-4 right-4 z-10 w-10 h-10 bg-charcoal-900/70 dark:bg-black/70 hover:bg-charcoal-900 dark:hover:bg-black text-white rounded-full flex items-center justify-center text-sm transition-all"><i
+                    class="fa-solid fa-times"></i></button>
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div
+                    class="relative aspect-square lg:aspect-auto lg:min-h-[450px] bg-gray-100 dark:bg-[#0f0d0b] rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none overflow-hidden">
+                    <img id="modal-img" src="" alt="" class="w-full h-full object-cover"></div>
+                <div class="p-8 lg:p-10 flex flex-col justify-between">
+                    <div>
+                        <span id="modal-category"
+                            class="inline-block bg-brand-100 dark:bg-brand-900/40 text-brand-800 dark:text-brand-300 text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-brand-300 dark:border-brand-500/40 mb-3"></span>
+                        <h3 id="modal-title" class="font-serif text-3xl text-charcoal-900 dark:text-cream mb-1"></h3>
+                        <p id="modal-medium" class="text-sm text-gray-500 dark:text-gray-400 italic mb-4"></p>
+                        <p id="modal-description" class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-6">
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div
+                                class="bg-brand-50 dark:bg-[#0f0d0b] p-3 rounded-xl border border-brand-200/60 dark:border-brand-500/20">
+                                <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-0.5">
+                                    Digital Copy</p>
+                                <p class="text-sm font-semibold text-brand-800 dark:text-brand-300">300 DPI Available
+                                </p>
+                            </div>
+                            <div
+                                class="bg-brand-50 dark:bg-[#0f0d0b] p-3 rounded-xl border border-brand-200/60 dark:border-brand-500/20">
+                                <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-0.5">
+                                    Framed Print</p>
+                                <p class="text-sm font-semibold text-brand-800 dark:text-brand-300">3 Sizes Available
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="modal-wa-btn" href="#" target="_blank"
+                        class="block w-full bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white font-medium py-3.5 rounded-xl text-sm uppercase tracking-widest text-center transition-all flex items-center justify-center space-x-2"><i
+                            class="fa-brands fa-whatsapp text-xl"></i><span>Inquire on WhatsApp</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ ADMIN PANEL — Hidden, accessible only via /#admin ═══ -->
+    <div id="admin-panel">
+        <div id="admin-toast"></div>
+
+        <!-- LOGIN SCREEN -->
+        <div id="admin-login" class="admin-login-wrap">
+            <div class="admin-login-card">
+                <div style="text-align:center;margin-bottom:32px;">
+                    <span style="font-family:'Great Vibes',cursive;font-size:2.2rem;color:#B08852;">ThePrettyArts</span>
+                    <p
+                        style="color:rgba(253,251,247,.35);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-top:4px;">
+                        Studio Admin</p>
+                    <div style="width:40px;height:1px;background:#B08852;margin:16px auto 0;"></div>
+                </div>
+                <div class="admin-field">
+                    <label class="admin-label">Email Address</label>
+                    <input id="admin-email" type="email" class="admin-input" placeholder="your@email.com"
+                        autocomplete="email">
+                </div>
+                <div class="admin-field">
+                    <label class="admin-label">Password</label>
+                    <input id="admin-password" type="password" class="admin-input" placeholder="••••••••"
+                        autocomplete="current-password" onkeydown="if(event.key==='Enter')adminLogin()">
+                </div>
+                <div id="admin-login-error"
+                    style="display:none;background:rgba(220,38,38,.15);border:1px solid rgba(220,38,38,.3);border-radius:8px;padding:10px 14px;color:#f87171;font-size:12px;margin-bottom:14px;">
+                </div>
+                <button id="admin-login-btn" class="admin-btn-gold" onclick="adminLogin()">Enter Studio</button>
+                <p style="text-align:center;color:rgba(253,251,247,.18);font-size:11px;margin-top:20px;">This page is
+                    not linked from the public site.</p>
             </div>
         </div>
 
-        <div class="admin-content">
-
-            <!-- TAB: SITE CONTENT -->
-            <div id="tab-content" class="admin-tab-pane">
-                <div class="admin-section">
-                    <div class="admin-section-title"><i class="fa-solid fa-palette"></i> Site Theme</div>
-                    <div class="admin-field">
-                        <label class="admin-label">Select Theme</label>
-                        <select id="sc-theme" class="admin-input" style="background:#0f0d0b; color:#FDFBF7;">
-                            <option value="dark">Dark Theme (Default)</option>
-                            <option value="light">Light Theme</option>
-                        </select>
-                    </div>
-                    <button class="admin-btn-sm admin-btn-save" onclick="saveSiteTheme()">Save Theme</button>
+        <!-- DASHBOARD -->
+        <div id="admin-dashboard" class="admin-dashboard">
+            <div class="admin-header">
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <span style="font-family:'Great Vibes',cursive;font-size:1.6rem;color:#B08852;">ThePrettyArts</span>
+                    <span
+                        style="color:rgba(253,251,247,.3);font-size:12px;letter-spacing:.15em;text-transform:uppercase;">Admin
+                        Studio</span>
                 </div>
-                <div class="admin-section">
-                    <div class="admin-section-title"><i class="fa-solid fa-bullhorn"></i> Announcement Bar</div>
-                    <div class="admin-field">
-                        <label class="admin-label">Bar Text</label>
-                        <input id="sc-announcement" type="text" class="admin-input" placeholder="Fine Art Studio • High-Res Digital Downloads...">
-                    </div>
-                    <button class="admin-btn-sm admin-btn-save" onclick="saveAnnouncementBar()">Save Announcement</button>
-                </div>
-                <div class="admin-section">
-                    <div class="admin-section-title"><i class="fa-solid fa-heading"></i> Hero Headline</div>
-                    <div class="admin-grid-2">
-                        <div class="admin-field"><label class="admin-label">Headline (serif)</label><input id="sc-h1-line1" type="text" class="admin-input" placeholder="Transforming Canvas into Timeless Emotion"></div>
-                        <div class="admin-field"><label class="admin-label">Cursive Subline (optional)</label><input id="sc-h1-cursive" type="text" class="admin-input" placeholder=""></div>
-                    </div>
-                    <button class="admin-btn-sm admin-btn-save" onclick="saveHeroHeadline()">Save Headline</button>
-                </div>
-                <div class="admin-section">
-                    <div class="admin-section-title"><i class="fa-solid fa-image"></i> Featured Hero Artwork</div>
-                    <div class="admin-field"><label class="admin-label">Artwork Title (shown in card)</label><input id="sc-hero-title" type="text" class="admin-input" placeholder="Whispers of Gold"></div>
-                    <div class="admin-field"><label class="admin-label">Artwork Subtitle / Medium</label><input id="sc-hero-subtitle" type="text" class="admin-input" placeholder="Original Acrylic &amp; Gold Leaf on Textured Canvas"></div>
-                    <div class="admin-field">
-                        <label class="admin-label">Hero Image — Paste URL</label>
-                        <input id="sc-hero-url" type="url" class="admin-input" placeholder="https://..." oninput="previewAdminImg('sc-hero-url','sc-hero-preview')">
-                        <img id="sc-hero-preview" class="img-preview" alt="Hero preview">
-                    </div>
-                    <div class="admin-field">
-                        <label class="admin-label">— or Upload Image File —</label>
-                        <label class="upload-area" for="sc-hero-file-input">
-                            <i class="fa-solid fa-cloud-arrow-up" style="font-size:20px;margin-bottom:6px;display:block;color:#B08852;"></i>
-                            Click to upload image
-                            <input id="sc-hero-file-input" type="file" accept="image/*" onchange="handleHeroFileUpload(this)">
-                        </label>
-                        <p id="sc-hero-upload-status" style="color:rgba(253,251,247,.4);font-size:11px;margin-top:4px;"></p>
-                    </div>
-                    <button class="admin-btn-sm admin-btn-save" onclick="saveHeroArtwork()">Save Hero Artwork</button>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <span id="admin-user-email" style="color:rgba(253,251,247,.4);font-size:12px;"></span>
+                    <button onclick="adminLogout()"
+                        style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(253,251,247,.6);border-radius:8px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.05em;transition:all .2s;"
+                        onmouseover="this.style.background='rgba(255,255,255,.12)'"
+                        onmouseout="this.style.background='rgba(255,255,255,.07)'">
+                        <i class="fa-solid fa-right-from-bracket" style="margin-right:6px;"></i>Sign Out
+                    </button>
                 </div>
             </div>
 
-            <!-- TAB: ARTWORKS -->
-            <div id="tab-artworks" class="admin-tab-pane" style="display:none;">
-                <div class="admin-section">
-                    <div class="admin-section-title" style="justify-content:space-between;">
-                        <span><i class="fa-solid fa-images"></i> Artwork Cards</span>
-                        <button class="admin-btn-add" onclick="showAddArtworkForm()"><i class="fa-solid fa-plus" style="margin-right:6px;"></i>Add New Artwork</button>
+            <!-- Tabs -->
+            <div style="background:#1a1714;border-bottom:1px solid rgba(176,136,82,.15);padding:0 32px;">
+                <div style="display:flex;gap:4px;padding:12px 0;max-width:1000px;margin:0 auto;">
+                    <button class="admin-tab-btn active" id="tab-btn-content" onclick="showTab('content')"><i
+                            class="fa-solid fa-pen-to-square" style="margin-right:6px;"></i>Site Content</button>
+                    <button class="admin-tab-btn" id="tab-btn-artworks" onclick="showTab('artworks')"><i
+                            class="fa-solid fa-images" style="margin-right:6px;"></i>Artworks</button>
+                    <button class="admin-tab-btn" id="tab-btn-categories" onclick="showTab('categories')"><i
+                            class="fa-solid fa-tags" style="margin-right:6px;"></i>Categories</button>
+                </div>
+            </div>
+
+            <div class="admin-content">
+
+                <!-- TAB: SITE CONTENT -->
+                <div id="tab-content" class="admin-tab-pane">
+                    <div class="admin-section">
+                        <div class="admin-section-title"><i class="fa-solid fa-palette"></i> Site Theme</div>
+                        <div class="admin-field">
+                            <label class="admin-label">Select Theme</label>
+                            <select id="sc-theme" class="admin-input" style="background:#0f0d0b; color:#FDFBF7;">
+                                <option value="light">Light Theme (Default)</option>
+                                <option value="dark">Dark Theme</option>
+                            </select>
+                        </div>
+                        <button class="admin-btn-sm admin-btn-save" onclick="saveSiteTheme()">Save Theme</button>
                     </div>
-                    <div id="artwork-form-wrapper" style="display:none;margin-bottom:16px;">
-                        <div class="artwork-edit-form">
-                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-                                <span id="artwork-form-title" style="color:#C5A478;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;"></span>
-                                <button class="admin-btn-sm admin-btn-cancel" onclick="hideArtworkForm()">✕ Cancel</button>
+                    <div class="admin-section">
+                        <div class="admin-section-title"><i class="fa-solid fa-bullhorn"></i> Announcement Bar</div>
+                        <div class="admin-field">
+                            <label class="admin-label">Bar Text</label>
+                            <input id="sc-announcement" type="text" class="admin-input"
+                                placeholder="Fine Art Studio • High-Res Digital Downloads...">
+                        </div>
+                        <button class="admin-btn-sm admin-btn-save" onclick="saveAnnouncementBar()">Save
+                            Announcement</button>
+                    </div>
+                    <div class="admin-section">
+                        <div class="admin-section-title"><i class="fa-solid fa-heading"></i> Hero Headline</div>
+                        <div class="admin-grid-2">
+                            <div class="admin-field"><label class="admin-label">Headline (serif)</label><input
+                                    id="sc-h1-line1" type="text" class="admin-input"
+                                    placeholder="Transforming Canvas into Timeless Emotion"></div>
+                            <div class="admin-field"><label class="admin-label">Cursive Subline (optional)</label><input
+                                    id="sc-h1-cursive" type="text" class="admin-input" placeholder=""></div>
+                        </div>
+                        <button class="admin-btn-sm admin-btn-save" onclick="saveHeroHeadline()">Save Headline</button>
+                    </div>
+                    <div class="admin-section">
+                        <div class="admin-section-title"><i class="fa-solid fa-image"></i> Featured Hero Artwork</div>
+                        <div class="admin-field"><label class="admin-label">Artwork Title (shown in card)</label><input
+                                id="sc-hero-title" type="text" class="admin-input" placeholder="Whispers of Gold"></div>
+                        <div class="admin-field"><label class="admin-label">Artwork Subtitle / Medium</label><input
+                                id="sc-hero-subtitle" type="text" class="admin-input"
+                                placeholder="Original Acrylic &amp; Gold Leaf on Textured Canvas"></div>
+                        <div class="admin-field">
+                            <label class="admin-label">Hero Image — Paste URL</label>
+                            <input id="sc-hero-url" type="url" class="admin-input" placeholder="https://..."
+                                oninput="previewAdminImg('sc-hero-url','sc-hero-preview')">
+                            <img id="sc-hero-preview" class="img-preview" alt="Hero preview">
+                        </div>
+                        <div class="admin-field">
+                            <label class="admin-label">— or Upload Image File —</label>
+                            <label class="upload-area" for="sc-hero-file-input">
+                                <i class="fa-solid fa-cloud-arrow-up"
+                                    style="font-size:20px;margin-bottom:6px;display:block;color:#B08852;"></i>
+                                Click to upload image
+                                <input id="sc-hero-file-input" type="file" accept="image/*"
+                                    onchange="handleHeroFileUpload(this)">
+                            </label>
+                            <p id="sc-hero-upload-status"
+                                style="color:rgba(253,251,247,.4);font-size:11px;margin-top:4px;"></p>
+                        </div>
+                        <button class="admin-btn-sm admin-btn-save" onclick="saveHeroArtwork()">Save Hero
+                            Artwork</button>
+                    </div>
+                </div>
+
+                <!-- TAB: ARTWORKS -->
+                <div id="tab-artworks" class="admin-tab-pane" style="display:none;">
+                    <div class="admin-section">
+                        <div class="admin-section-title" style="justify-content:space-between;">
+                            <span><i class="fa-solid fa-images"></i> Artwork Cards</span>
+                            <button class="admin-btn-add" onclick="showAddArtworkForm()"><i class="fa-solid fa-plus"
+                                    style="margin-right:6px;"></i>Add New Artwork</button>
+                        </div>
+                        <div id="artwork-form-wrapper" style="display:none;margin-bottom:16px;">
+                            <div class="artwork-edit-form">
+                                <div
+                                    style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                                    <span id="artwork-form-title"
+                                        style="color:#C5A478;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;"></span>
+                                    <button class="admin-btn-sm admin-btn-cancel" onclick="hideArtworkForm()">✕
+                                        Cancel</button>
+                                </div>
+                                <input type="hidden" id="af-id">
+                                <div class="admin-grid-2">
+                                    <div class="admin-field"><label class="admin-label">Title *</label><input
+                                            id="af-title" type="text" class="admin-input"
+                                            placeholder="e.g. Whispers of Gold"></div>
+                                    <div class="admin-field"><label class="admin-label">Medium / Subtitle
+                                            *</label><input id="af-medium" type="text" class="admin-input"
+                                            placeholder="e.g. Acrylic &amp; Gold Leaf on Canvas"></div>
+                                </div>
+                                <div class="admin-field"><label class="admin-label">Description</label><textarea
+                                        id="af-description" class="admin-input" rows="2"
+                                        placeholder="Short description shown in the artwork detail modal..."></textarea>
+                                </div>
+                                <div class="admin-grid-2">
+                                    <div class="admin-field"><label class="admin-label">Category *</label><select
+                                            id="af-category" class="admin-input"></select></div>
+                                    <div class="admin-field"><label class="admin-label">Display Order</label><input
+                                            id="af-order" type="number" class="admin-input" placeholder="1" min="1"
+                                            value="1"></div>
+                                </div>
+                                <div class="admin-field">
+                                    <label class="admin-label">Image — Paste URL</label>
+                                    <input id="af-image-url" type="url" class="admin-input" placeholder="https://..."
+                                        oninput="previewAdminImg('af-image-url','af-img-preview')">
+                                    <img id="af-img-preview" class="img-preview" alt="Artwork preview">
+                                </div>
+                                <div class="admin-field">
+                                    <label class="admin-label">— or Upload Image File —</label>
+                                    <label class="upload-area" for="af-file-input">
+                                        <i class="fa-solid fa-cloud-arrow-up"
+                                            style="font-size:20px;margin-bottom:6px;display:block;color:#B08852;"></i>
+                                        Click to upload image
+                                        <input id="af-file-input" type="file" accept="image/*"
+                                            onchange="handleArtworkFileUpload(this)">
+                                    </label>
+                                    <p id="af-upload-status"
+                                        style="color:rgba(253,251,247,.4);font-size:11px;margin-top:4px;"></p>
+                                </div>
+                                <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;">
+                                    <button class="admin-btn-sm admin-btn-save" onclick="saveArtworkForm()"><i
+                                            class="fa-solid fa-check" style="margin-right:4px;"></i>Save
+                                        Artwork</button>
+                                    <button id="af-delete-btn" class="admin-btn-sm admin-btn-delete"
+                                        onclick="deleteArtworkFromForm()" style="display:none;"><i
+                                            class="fa-solid fa-trash" style="margin-right:4px;"></i>Delete
+                                        Artwork</button>
+                                </div>
                             </div>
-                            <input type="hidden" id="af-id">
-                            <div class="admin-grid-2">
-                                <div class="admin-field"><label class="admin-label">Title *</label><input id="af-title" type="text" class="admin-input" placeholder="e.g. Whispers of Gold"></div>
-                                <div class="admin-field"><label class="admin-label">Medium / Subtitle *</label><input id="af-medium" type="text" class="admin-input" placeholder="e.g. Acrylic &amp; Gold Leaf on Canvas"></div>
-                            </div>
-                            <div class="admin-field"><label class="admin-label">Description</label><textarea id="af-description" class="admin-input" rows="2" placeholder="Short description shown in the artwork detail modal..."></textarea></div>
-                            <div class="admin-grid-2">
-                                <div class="admin-field"><label class="admin-label">Category *</label><select id="af-category" class="admin-input"></select></div>
-                                <div class="admin-field"><label class="admin-label">Display Order</label><input id="af-order" type="number" class="admin-input" placeholder="1" min="1" value="1"></div>
-                            </div>
-                            <div class="admin-field">
-                                <label class="admin-label">Image — Paste URL</label>
-                                <input id="af-image-url" type="url" class="admin-input" placeholder="https://..." oninput="previewAdminImg('af-image-url','af-img-preview')">
-                                <img id="af-img-preview" class="img-preview" alt="Artwork preview">
-                            </div>
-                            <div class="admin-field">
-                                <label class="admin-label">— or Upload Image File —</label>
-                                <label class="upload-area" for="af-file-input">
-                                    <i class="fa-solid fa-cloud-arrow-up" style="font-size:20px;margin-bottom:6px;display:block;color:#B08852;"></i>
-                                    Click to upload image
-                                    <input id="af-file-input" type="file" accept="image/*" onchange="handleArtworkFileUpload(this)">
-                                </label>
-                                <p id="af-upload-status" style="color:rgba(253,251,247,.4);font-size:11px;margin-top:4px;"></p>
-                            </div>
-                            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;">
-                                <button class="admin-btn-sm admin-btn-save" onclick="saveArtworkForm()"><i class="fa-solid fa-check" style="margin-right:4px;"></i>Save Artwork</button>
-                                <button id="af-delete-btn" class="admin-btn-sm admin-btn-delete" onclick="deleteArtworkFromForm()" style="display:none;"><i class="fa-solid fa-trash" style="margin-right:4px;"></i>Delete Artwork</button>
+                        </div>
+                        <div id="artworks-list">
+                            <div style="text-align:center;padding:32px;color:rgba(253,251,247,.3);font-size:13px;"><i
+                                    class="fa-solid fa-spinner fa-spin" style="margin-right:8px;"></i>Loading
+                                artworks...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: CATEGORIES -->
+                <div id="tab-categories" class="admin-tab-pane" style="display:none;">
+                    <div class="admin-section">
+                        <div class="admin-section-title"><i class="fa-solid fa-tags"></i> Gallery Filter Categories
+                        </div>
+                        <p style="color:rgba(253,251,247,.4);font-size:12px;margin-bottom:16px;line-height:1.6;">These
+                            are the filter pills shown above the gallery grid. Each category has a <strong
+                                style="color:rgba(253,251,247,.7);">label</strong> (displayed) and a <strong
+                                style="color:rgba(253,251,247,.7);">slug</strong> (used for filtering). Slugs are
+                            auto-generated.</p>
+                        <div id="categories-list" style="margin-bottom:20px;min-height:40px;">
+                            <div style="text-align:center;padding:16px;color:rgba(253,251,247,.3);font-size:13px;"><i
+                                    class="fa-solid fa-spinner fa-spin"></i></div>
+                        </div>
+                        <div style="border-top:1px solid rgba(176,136,82,.15);padding-top:20px;">
+                            <div class="admin-section-title"
+                                style="font-size:11px;border:none;padding:0;margin-bottom:12px;"><i
+                                    class="fa-solid fa-plus"></i> Add New Category</div>
+                            <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;">
+                                <div style="flex:1;min-width:200px;"><label class="admin-label">Category
+                                        Label</label><input id="new-cat-label" type="text" class="admin-input"
+                                        placeholder="e.g. Abstract &amp; Texture" style="margin:0;"></div>
+                                <div style="flex:1;min-width:160px;"><label class="admin-label">Auto Slug
+                                        (preview)</label><input id="new-cat-slug" type="text" class="admin-input"
+                                        placeholder="abstract-texture" readonly style="margin:0;opacity:.6;"></div>
+                                <button class="admin-btn-sm admin-btn-save" onclick="addCategory()"
+                                    style="flex-shrink:0;margin-bottom:0;padding:12px 20px;"><i class="fa-solid fa-plus"
+                                        style="margin-right:4px;"></i>Add</button>
                             </div>
                         </div>
                     </div>
-                    <div id="artworks-list"><div style="text-align:center;padding:32px;color:rgba(253,251,247,.3);font-size:13px;"><i class="fa-solid fa-spinner fa-spin" style="margin-right:8px;"></i>Loading artworks...</div></div>
                 </div>
-            </div>
 
-            <!-- TAB: CATEGORIES -->
-            <div id="tab-categories" class="admin-tab-pane" style="display:none;">
-                <div class="admin-section">
-                    <div class="admin-section-title"><i class="fa-solid fa-tags"></i> Gallery Filter Categories</div>
-                    <p style="color:rgba(253,251,247,.4);font-size:12px;margin-bottom:16px;line-height:1.6;">These are the filter pills shown above the gallery grid. Each category has a <strong style="color:rgba(253,251,247,.7);">label</strong> (displayed) and a <strong style="color:rgba(253,251,247,.7);">slug</strong> (used for filtering). Slugs are auto-generated.</p>
-                    <div id="categories-list" style="margin-bottom:20px;min-height:40px;"><div style="text-align:center;padding:16px;color:rgba(253,251,247,.3);font-size:13px;"><i class="fa-solid fa-spinner fa-spin"></i></div></div>
-                    <div style="border-top:1px solid rgba(176,136,82,.15);padding-top:20px;">
-                        <div class="admin-section-title" style="font-size:11px;border:none;padding:0;margin-bottom:12px;"><i class="fa-solid fa-plus"></i> Add New Category</div>
-                        <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;">
-                            <div style="flex:1;min-width:200px;"><label class="admin-label">Category Label</label><input id="new-cat-label" type="text" class="admin-input" placeholder="e.g. Abstract &amp; Texture" style="margin:0;"></div>
-                            <div style="flex:1;min-width:160px;"><label class="admin-label">Auto Slug (preview)</label><input id="new-cat-slug" type="text" class="admin-input" placeholder="abstract-texture" readonly style="margin:0;opacity:.6;"></div>
-                            <button class="admin-btn-sm admin-btn-save" onclick="addCategory()" style="flex-shrink:0;margin-bottom:0;padding:12px 20px;"><i class="fa-solid fa-plus" style="margin-right:4px;"></i>Add</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div><!-- /admin-content -->
+        </div><!-- /admin-dashboard -->
+    </div><!-- /admin-panel -->
 
-        </div><!-- /admin-content -->
-    </div><!-- /admin-dashboard -->
-</div><!-- /admin-panel -->
+    <script>
+        // ═══ SUPABASE CONFIG ═══
+        // Replace these with your values from supabase.com → Settings → API
+        const SUPABASE_URL = 'https://cekuibgpmtjgoheizkvt.supabase.co';
+        const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNla3VpYmdwbXRqZ29oZWl6a3Z0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY3ODY2MjgsImV4cCI6MjEwMjM2MjYyOH0.JRaFRQUCmSGMz9TWKyT1MGhLM0rL68HYXbXZ1CcVTxk';
 
-<script>
-// ═══ SUPABASE CONFIG ═══
-// Replace these with your values from supabase.com → Settings → API
-const SUPABASE_URL  = 'https://cekuibgpmtjgoheizkvt.supabase.co';
-const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNla3VpYmdwbXRqZ29oZWl6a3Z0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY3ODY2MjgsImV4cCI6MjEwMjM2MjYyOH0.JRaFRQUCmSGMz9TWKyT1MGhLM0rL68HYXbXZ1CcVTxk';
+        let _sb;
+        let _categories = [];
+        let _artworks = [];
 
-let _sb;
-let _categories = [];
-let _artworks   = [];
-
-// ─── INIT ───────────────────────────────
-function initSupabase() {
-    try { _sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON); }
-    catch(e) { console.warn('Supabase init failed – check credentials.'); }
-}
-
-async function appStart() {
-    initSupabase();
-    await Promise.all([loadSiteSettings(), loadCategories(), loadArtworks()]);
-    checkAdminHash();
-}
-
-// ─── HASH ROUTING ───────────────────────
-function checkAdminHash() {
-    if (window.location.hash === '#admin') {
-        document.getElementById('admin-panel').classList.add('visible');
-        document.body.style.overflow = 'hidden';
-        checkAdminSession();
-    }
-}
-window.addEventListener('hashchange', () => {
-    if (window.location.hash === '#admin') {
-        document.getElementById('admin-panel').classList.add('visible');
-        document.body.style.overflow = 'hidden';
-        checkAdminSession();
-    } else {
-        document.getElementById('admin-panel').classList.remove('visible');
-        document.body.style.overflow = '';
-    }
-});
-
-async function checkAdminSession() {
-    if (!_sb) return showAdminLogin();
-    const { data:{ session } } = await _sb.auth.getSession();
-    if (session) showAdminDashboard(session.user);
-    else showAdminLogin();
-}
-function showAdminLogin() {
-    document.getElementById('admin-login').style.display = 'flex';
-    document.getElementById('admin-dashboard').classList.remove('visible');
-}
-function showAdminDashboard(user) {
-    document.getElementById('admin-login').style.display = 'none';
-    document.getElementById('admin-dashboard').classList.add('visible');
-    document.getElementById('admin-user-email').textContent = user.email;
-    loadAdminArtworksList();
-    loadAdminCategoriesList();
-    populateSiteContentForm();
-}
-
-// ─── AUTH ────────────────────────────────
-async function adminLogin() {
-    const email = document.getElementById('admin-email').value.trim();
-    const pass  = document.getElementById('admin-password').value;
-    const btn   = document.getElementById('admin-login-btn');
-    const err   = document.getElementById('admin-login-error');
-    err.style.display = 'none';
-    if (!email || !pass) { showLoginErr(err,'Please enter email and password.'); return; }
-    btn.disabled = true; btn.textContent = 'Signing in…';
-    const { data, error } = await _sb.auth.signInWithPassword({ email, password: pass });
-    btn.disabled = false; btn.textContent = 'Enter Studio';
-    if (error) { showLoginErr(err, error.message); return; }
-    showAdminDashboard(data.user);
-}
-async function adminLogout() {
-    await _sb.auth.signOut();
-    showAdminLogin();
-    document.getElementById('admin-email').value = '';
-    document.getElementById('admin-password').value = '';
-}
-function showLoginErr(el, msg) { el.textContent = msg; el.style.display = 'block'; }
-
-// ─── TOAST ───────────────────────────────
-let _toastTimer;
-function toast(msg, type='success') {
-    const t = document.getElementById('admin-toast');
-    t.textContent = msg; t.className = 'show ' + type;
-    clearTimeout(_toastTimer);
-    _toastTimer = setTimeout(() => t.className = '', 3200);
-}
-
-// ─── TAB NAV ─────────────────────────────
-function showTab(tab) {
-    ['content','artworks','categories'].forEach(t => {
-        document.getElementById('tab-' + t).style.display = t === tab ? 'block' : 'none';
-        document.getElementById('tab-btn-' + t).classList.toggle('active', t === tab);
-    });
-}
-
-// ─── SITE SETTINGS ───────────────────────
-const DEFAULTS = {
-    site_theme: 'dark',
-    announcement_bar_text: 'Fine Art Studio • High-Res Digital Downloads & Museum-Grade Framed Prints • Worldwide Delivery',
-    hero_h1_line1:         'Transforming Canvas into Timeless Emotion',
-    hero_h1_cursive:       '',
-    hero_image_url:        'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80',
-    hero_artwork_title:    'Whispers of Gold',
-    hero_artwork_subtitle: 'Original Acrylic & Gold Leaf on Textured Canvas',
-};
-
-async function loadSiteSettings() {
-    if (!_sb) return applySettings(DEFAULTS);
-    const { data, error } = await _sb.from('site_settings').select('key,value');
-    if (error || !data) return applySettings(DEFAULTS);
-    const map = {}; data.forEach(r => map[r.key] = r.value);
-    applySettings({ ...DEFAULTS, ...map });
-}
-function applySettings(s) {
-    if (s.site_theme === 'light') {
-        document.documentElement.classList.remove('dark');
-    } else {
-        document.documentElement.classList.add('dark');
-    }
-    setText('announcement-bar-text', s.announcement_bar_text);
-    setText('hero-h1-line1',         s.hero_h1_line1);
-    setText('hero-h1-cursive',       s.hero_h1_cursive);
-    setText('hero-artwork-title',    s.hero_artwork_title);
-    setText('hero-artwork-subtitle', s.hero_artwork_subtitle);
-    const img = document.getElementById('hero-art-img');
-    if (img && s.hero_image_url) img.src = s.hero_image_url;
-}
-function populateSiteContentForm() {
-    setVal('sc-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-    setVal('sc-announcement',  getText('announcement-bar-text'));
-    setVal('sc-h1-line1',      getText('hero-h1-line1'));
-    setVal('sc-h1-cursive',    getText('hero-h1-cursive'));
-    setVal('sc-hero-title',    getText('hero-artwork-title'));
-    setVal('sc-hero-subtitle', getText('hero-artwork-subtitle'));
-    const heroSrc = document.getElementById('hero-art-img')?.src || '';
-    setVal('sc-hero-url', heroSrc);
-    previewAdminImg('sc-hero-url','sc-hero-preview');
-}
-async function upsertSetting(key, value) {
-    await _sb.from('site_settings').upsert({ key, value }, { onConflict:'key' });
-}
-async function saveSiteTheme() {
-    const val = document.getElementById('sc-theme').value;
-    await upsertSetting('site_theme', val);
-    if (val === 'light') { document.documentElement.classList.remove('dark'); }
-    else { document.documentElement.classList.add('dark'); }
-    toast('Site theme updated!');
-}
-async function saveAnnouncementBar() {
-    const val = document.getElementById('sc-announcement').value.trim();
-    if (!val) return toast('Please enter text.','error');
-    await upsertSetting('announcement_bar_text', val);
-    setText('announcement-bar-text', val); toast('Announcement bar updated!');
-}
-async function saveHeroHeadline() {
-    const l1 = document.getElementById('sc-h1-line1').value.trim();
-    const lc = document.getElementById('sc-h1-cursive').value.trim();
-    await Promise.all([upsertSetting('hero_h1_line1',l1), upsertSetting('hero_h1_cursive',lc)]);
-    setText('hero-h1-line1',l1); setText('hero-h1-cursive',lc); toast('Hero headline updated!');
-}
-async function saveHeroArtwork() {
-    const title    = document.getElementById('sc-hero-title').value.trim();
-    const subtitle = document.getElementById('sc-hero-subtitle').value.trim();
-    const url      = document.getElementById('sc-hero-url').value.trim();
-    await Promise.all([upsertSetting('hero_artwork_title',title),upsertSetting('hero_artwork_subtitle',subtitle),upsertSetting('hero_image_url',url)]);
-    setText('hero-artwork-title',title); setText('hero-artwork-subtitle',subtitle);
-    const img = document.getElementById('hero-art-img');
-    if (img && url) img.src = url;
-    toast('Hero artwork updated!');
-}
-async function handleHeroFileUpload(input) {
-    const file = input.files[0]; if (!file) return;
-    document.getElementById('sc-hero-upload-status').textContent = 'Uploading…';
-    const result = await uploadToStorage(file);
-    if (!result || !result.url) {
-        document.getElementById('sc-hero-upload-status').textContent = 'Upload failed: ' + (result?.errorMsg || 'Check Supabase Storage bucket policies.');
-        return;
-    }
-    document.getElementById('sc-hero-url').value = result.url;
-    document.getElementById('sc-hero-upload-status').textContent = 'Uploaded successfully!';
-    previewAdminImg('sc-hero-url','sc-hero-preview');
-}
-
-// ─── CATEGORIES ──────────────────────────
-async function loadCategories() {
-    if (!_sb) { renderFilterPills([]); return; }
-    const { data, error } = await _sb.from('categories').select('*').order('display_order');
-    _categories = error ? [] : (data || []);
-    renderFilterPills(_categories);
-}
-function renderFilterPills(cats) {
-    const c = document.getElementById('filter-buttons');
-    let html = '<button data-filter="all" class="gallery-filter-btn active bg-charcoal-900 text-cream px-5 py-2 rounded-full text-xs uppercase tracking-widest font-medium transition-all">All Works</button>';
-    cats.forEach(cat => {
-        html += '<button data-filter="' + cat.slug + '" class="gallery-filter-btn bg-white hover:bg-brand-100 text-charcoal-800 border border-brand-200 px-5 py-2 rounded-full text-xs uppercase tracking-widest font-medium transition-all">' + cat.label + '</button>';
-    });
-    c.innerHTML = html;
-    c.querySelectorAll('.gallery-filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => filterGallery(btn.dataset.filter, btn));
-    });
-}
-function filterGallery(filter, activeBtn) {
-    document.querySelectorAll('.gallery-filter-btn').forEach(b => {
-        b.className = 'gallery-filter-btn bg-white hover:bg-brand-100 text-charcoal-800 border border-brand-200 px-5 py-2 rounded-full text-xs uppercase tracking-widest font-medium transition-all';
-    });
-    activeBtn.className = 'gallery-filter-btn active bg-charcoal-900 text-cream px-5 py-2 rounded-full text-xs uppercase tracking-widest font-medium transition-all';
-    document.querySelectorAll('.art-card').forEach(card => {
-        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
-    });
-}
-async function loadAdminCategoriesList() {
-    await loadCategories();
-    renderAdminCategoriesList();
-    populateCategoryDropdown();
-}
-function renderAdminCategoriesList() {
-    const c = document.getElementById('categories-list');
-    if (!_categories.length) { c.innerHTML = '<p style="color:rgba(253,251,247,.35);font-size:13px;">No categories yet. Add one below.</p>'; return; }
-    c.innerHTML = _categories.map(cat => '<span class="cat-pill">' + cat.label + '<span style="color:rgba(197,164,120,.4);font-size:10px;margin-left:2px;">[' + cat.slug + ']</span><button class="cat-pill-delete" onclick="deleteCategory(\'' + cat.id + '\',\'' + cat.label.replace(/'/g,"\\'") + '\')">×</button></span>').join('');
-}
-function populateCategoryDropdown() {
-    const sel = document.getElementById('af-category'); if (!sel) return;
-    sel.innerHTML = _categories.map(c => '<option value="' + c.id + '" data-slug="' + c.slug + '" data-label="' + c.label.replace(/"/g,'&quot;') + '">' + c.label + '</option>').join('');
-}
-document.getElementById('new-cat-label').addEventListener('input', function() {
-    document.getElementById('new-cat-slug').value = slugify(this.value);
-});
-async function addCategory() {
-    const label = document.getElementById('new-cat-label').value.trim();
-    const slug  = document.getElementById('new-cat-slug').value.trim();
-    if (!label || !slug) return toast('Please enter a category label.','error');
-    const maxOrder = _categories.reduce((m,c) => Math.max(m, c.display_order||0), 0);
-    const { error } = await _sb.from('categories').insert({ label, slug, display_order: maxOrder+1 });
-    if (error) { toast('Error: ' + error.message,'error'); return; }
-    document.getElementById('new-cat-label').value = '';
-    document.getElementById('new-cat-slug').value  = '';
-    toast('Category added!');
-    await loadAdminCategoriesList();
-    renderFilterPills(_categories);
-}
-async function deleteCategory(id, label) {
-    if (!confirm('Delete category "' + label + '"? Artworks using it will still exist but won\'t be filterable.')) return;
-    const { error } = await _sb.from('categories').delete().eq('id', id);
-    if (error) { toast('Error: ' + error.message,'error'); return; }
-    toast('Category deleted.');
-    await loadAdminCategoriesList();
-    renderFilterPills(_categories);
-}
-
-// ─── ARTWORKS ─────────────────────────────
-async function loadArtworks() {
-    if (!_sb) { renderGalleryCards([]); renderVizSelector([]); return; }
-    const { data, error } = await _sb.from('artworks').select('*, categories(slug,label)').order('display_order');
-    _artworks = error ? [] : (data || []);
-    renderGalleryCards(_artworks);
-    renderVizSelector(_artworks);
-}
-function renderGalleryCards(artworks) {
-    const grid = document.getElementById('gallery-grid');
-    if (!artworks.length) {
-        grid.innerHTML = '<div class="col-span-3 text-center py-16 text-gray-400"><i class="fa-solid fa-image text-4xl mb-4 block opacity-30"></i>No artworks yet. Add some from the admin panel.</div>';
-        return;
-    }
-    grid.innerHTML = artworks.map(a => {
-        const catSlug  = (a.categories && a.categories.slug)  || a.category_slug  || '';
-        const catLabel = (a.categories && a.categories.label) || a.category_label || '';
-        const img      = a.image_url || 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80';
-        const title    = (a.title||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-        const medium   = (a.medium||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-        const catLbl   = catLabel.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-        const desc     = (a.description||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-        const imgSafe  = img.replace(/'/g,"\\'");
-        return '<div class="art-card group bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md hover:shadow-2xl transition-all duration-300" data-category="' + catSlug + '">'
-            + '<div class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-black">'
-            + '<img src="' + img + '" alt="' + (a.title||'') + '" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">'
-            + '<div class="absolute inset-0 bg-charcoal-900/40 dark:bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-3 p-4">'
-            + '<button onclick="openArtModal(\'' + title + '\',\'' + catLbl + '\',\'' + medium + '\',\'' + imgSafe + '\',\'' + desc + '\')" class="bg-cream dark:bg-brand-600 text-charcoal-900 dark:text-cream text-xs font-semibold uppercase tracking-wider px-4 py-2.5 rounded-full shadow-lg hover:bg-brand-500 hover:text-white transition-all">View Details</button>'
-            + '</div>'
-            + '<span class="absolute top-3 left-3 bg-cream/90 dark:bg-[#0f0d0b]/90 backdrop-blur-md text-brand-800 dark:text-brand-300 text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full border border-brand-300 dark:border-brand-500/40">' + catLabel + '</span>'
-            + '</div>'
-            + '<div class="p-5">'
-            + '<h3 class="font-serif text-xl text-charcoal-900 dark:text-cream group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">' + (a.title||'') + '</h3>'
-            + '<p class="text-xs text-gray-500 dark:text-gray-400 mt-1 italic">' + (a.medium||'') + '</p>'
-            + '<div class="mt-4 pt-3 border-t border-brand-100 dark:border-brand-500/20 flex items-center justify-between text-xs">'
-            + '<span class="text-gray-600 dark:text-gray-300"><i class="fa-solid fa-download text-brand-500 mr-1"></i> Digital: Available</span>'
-            + '<span class="text-gray-600 dark:text-gray-300"><i class="fa-solid fa-image text-brand-500 mr-1"></i> Framed: 3 Sizes</span>'
-            + '</div>'
-            + '<button onclick="openArtModal(\'' + title + '\',\'' + catLbl + '\',\'' + medium + '\',\'' + imgSafe + '\',\'' + desc + '\')" class="mt-4 w-full bg-brand-50 dark:bg-brand-900/40 hover:bg-brand-100 dark:hover:bg-brand-900/60 text-brand-800 dark:text-brand-300 font-medium py-2.5 rounded-xl text-xs uppercase tracking-widest transition-colors flex items-center justify-center space-x-2"><span>Inquire Artwork</span><i class="fa-solid fa-arrow-right text-xs"></i></button>'
-            + '</div></div>';
-    }).join('');
-}
-function renderVizSelector(artworks) {
-    const sel = document.getElementById('viz-art-select'); if (!sel) return;
-    sel.innerHTML = artworks.map(a => '<option value="' + (a.image_url||'') + '">' + (a.title||'') + ' (' + ((a.categories&&a.categories.label)||a.category_label||'') + ')</option>').join('');
-    updateRoomVisualizer();
-}
-async function loadAdminArtworksList() {
-    await loadArtworks();
-    renderAdminArtworksList();
-}
-function renderAdminArtworksList() {
-    const c = document.getElementById('artworks-list');
-    if (!_artworks.length) { c.innerHTML = '<p style="text-align:center;color:rgba(253,251,247,.3);font-size:13px;padding:24px;">No artworks yet. Click "Add New Artwork" above.</p>'; return; }
-    c.innerHTML = _artworks.map(a => {
-        const aJson = JSON.stringify(a).replace(/"/g,'&quot;');
-        return '<div class="artwork-list-item">'
-            + '<img src="' + (a.image_url||'') + '" alt="' + (a.title||'') + '" class="artwork-list-thumb" onerror="this.style.visibility=\'hidden\'">'
-            + '<div class="artwork-list-info"><div class="artwork-list-title">' + (a.title||'') + '</div><div class="artwork-list-meta">' + (a.medium||'') + ((a.categories&&a.categories.label) ? ' • ' + a.categories.label : '') + '</div></div>'
-            + '<div class="artwork-list-actions"><button class="admin-btn-sm admin-btn-edit" onclick="openEditArtworkForm(' + aJson + ')">Edit</button></div>'
-            + '</div>';
-    }).join('');
-}
-function showAddArtworkForm() {
-    document.getElementById('artwork-form-title').textContent = 'Add New Artwork';
-    document.getElementById('af-id').value          = '';
-    document.getElementById('af-title').value       = '';
-    document.getElementById('af-medium').value      = '';
-    document.getElementById('af-description').value = '';
-    document.getElementById('af-image-url').value   = '';
-    document.getElementById('af-order').value       = _artworks.length + 1;
-    const prev = document.getElementById('af-img-preview');
-    prev.src = ''; prev.classList.remove('visible');
-    document.getElementById('af-delete-btn').style.display = 'none';
-    document.getElementById('af-upload-status').textContent = '';
-    populateCategoryDropdown();
-    document.getElementById('artwork-form-wrapper').style.display = 'block';
-    document.getElementById('artwork-form-wrapper').scrollIntoView({ behavior:'smooth', block:'start' });
-}
-function openEditArtworkForm(a) {
-    document.getElementById('artwork-form-title').textContent = 'Edit Artwork';
-    document.getElementById('af-id').value          = a.id;
-    document.getElementById('af-title').value       = a.title || '';
-    document.getElementById('af-medium').value      = a.medium || '';
-    document.getElementById('af-description').value = a.description || '';
-    document.getElementById('af-image-url').value   = a.image_url || '';
-    document.getElementById('af-order').value       = a.display_order || 1;
-    document.getElementById('af-upload-status').textContent = '';
-    populateCategoryDropdown();
-    const sel = document.getElementById('af-category');
-    if (sel && a.category_id) sel.value = a.category_id;
-    previewAdminImg('af-image-url','af-img-preview');
-    document.getElementById('af-delete-btn').style.display = 'inline-flex';
-    document.getElementById('artwork-form-wrapper').style.display = 'block';
-    document.getElementById('artwork-form-wrapper').scrollIntoView({ behavior:'smooth', block:'start' });
-}
-function hideArtworkForm() { document.getElementById('artwork-form-wrapper').style.display = 'none'; }
-async function saveArtworkForm() {
-    const id          = document.getElementById('af-id').value;
-    const title       = document.getElementById('af-title').value.trim();
-    const medium      = document.getElementById('af-medium').value.trim();
-    const description = document.getElementById('af-description').value.trim();
-    const image_url   = document.getElementById('af-image-url').value.trim();
-    const order       = parseInt(document.getElementById('af-order').value) || 1;
-    const catSel      = document.getElementById('af-category');
-    const category_id = catSel.value;
-    const opt         = catSel.options[catSel.selectedIndex];
-    const category_slug  = opt ? opt.dataset.slug  : '';
-    const category_label = opt ? opt.dataset.label : '';
-    if (!title) { toast('Title is required.','error'); return; }
-    if (!image_url) { toast('Please add an image URL or upload a file.','error'); return; }
-    const payload = { title, medium, description, image_url, category_id, category_slug, category_label, display_order:order };
-    let error;
-    if (id) ({ error } = await _sb.from('artworks').update(payload).eq('id',id));
-    else    ({ error } = await _sb.from('artworks').insert(payload));
-    if (error) { toast('Error: ' + error.message,'error'); return; }
-    toast(id ? 'Artwork updated!' : 'Artwork added!');
-    hideArtworkForm();
-    await loadAdminArtworksList();
-    renderGalleryCards(_artworks);
-    renderVizSelector(_artworks);
-}
-async function deleteArtworkFromForm() {
-    const id    = document.getElementById('af-id').value;
-    const title = document.getElementById('af-title').value;
-    if (!id) return;
-    if (!confirm('Delete "' + title + '"? This cannot be undone.')) return;
-    const { error } = await _sb.from('artworks').delete().eq('id',id);
-    if (error) { toast('Error: ' + error.message,'error'); return; }
-    toast('Artwork deleted.');
-    hideArtworkForm();
-    await loadAdminArtworksList();
-    renderGalleryCards(_artworks);
-    renderVizSelector(_artworks);
-}
-async function handleArtworkFileUpload(input) {
-    const file = input.files[0]; if (!file) return;
-    document.getElementById('af-upload-status').textContent = 'Uploading…';
-    const result = await uploadToStorage(file);
-    if (!result || !result.url) {
-        document.getElementById('af-upload-status').textContent = 'Upload failed: ' + (result?.errorMsg || 'Check Supabase Storage bucket policies.');
-        return;
-    }
-    document.getElementById('af-image-url').value = result.url;
-    document.getElementById('af-upload-status').textContent = 'Uploaded!';
-    previewAdminImg('af-image-url','af-img-preview');
-}
-
-// ─── STORAGE UPLOAD ──────────────────────
-async function uploadToStorage(file) {
-    try {
-        const ext = file.name.split('.').pop();
-        const filename = 'artwork-' + Date.now() + '-' + Math.random().toString(36).slice(2) + '.' + ext;
-        const { data, error } = await _sb.storage.from('artwork-images').upload(filename, file, { upsert:false });
-        if (error) {
-            console.error('Storage upload error:', error);
-            return { url: null, errorMsg: error.message || JSON.stringify(error) };
+        // ─── INIT ───────────────────────────────
+        function initSupabase() {
+            try { _sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON); }
+            catch (e) { console.warn('Supabase init failed – check credentials.'); }
         }
-        const { data:urlData } = _sb.storage.from('artwork-images').getPublicUrl(data.path);
-        return { url: urlData.publicUrl, errorMsg: null };
-    } catch(e) {
-        console.error('Storage upload exception:', e);
-        return { url: null, errorMsg: e.message || 'Unknown error' };
-    }
-}
 
-// ─── HELPERS ─────────────────────────────
-function setText(id, val) { const el = document.getElementById(id); if (el && val) el.textContent = val; }
-function getText(id)       { const el = document.getElementById(id); return el ? el.textContent : ''; }
-function setVal(id, val)   { const el = document.getElementById(id); if (el) el.value = val || ''; }
-function previewAdminImg(inputId, previewId) {
-    const url = document.getElementById(inputId)?.value.trim();
-    const img = document.getElementById(previewId); if (!img) return;
-    if (url) { img.src = url; img.classList.add('visible'); }
-    else { img.src = ''; img.classList.remove('visible'); }
-}
-function slugify(str) {
-    return str.toLowerCase().trim()
-        .replace(/[&]/g,'and').replace(/[^a-z0-9\s-]/g,'')
-        .replace(/[\s]+/g,'-').replace(/-+/g,'-');
-}
+        async function appStart() {
+            initSupabase();
+            await Promise.all([loadSiteSettings(), loadCategories(), loadArtworks()]);
+            checkAdminHash();
+        }
 
-// ─── MODAL ───────────────────────────────
-function openArtModal(title, category, medium, imgUrl, description) {
-    document.getElementById('modal-title').textContent       = title;
-    document.getElementById('modal-category').textContent    = category;
-    document.getElementById('modal-medium').textContent      = medium;
-    document.getElementById('modal-img').src                 = imgUrl;
-    document.getElementById('modal-img').alt                 = title;
-    document.getElementById('modal-description').textContent = description;
-    const msg = encodeURIComponent('Hello Preeti! I am interested in "' + title + '" (' + medium + '). Could you share availability and pricing?');
-    document.getElementById('modal-wa-btn').href = 'https://wa.me/4917632610142?text=' + msg;
-    const m = document.getElementById('art-modal');
-    m.classList.remove('hidden'); m.classList.add('flex');
-    document.body.style.overflow = 'hidden';
-}
-function closeArtModal() {
-    const m = document.getElementById('art-modal');
-    m.classList.add('hidden'); m.classList.remove('flex');
-    document.body.style.overflow = '';
-}
-document.getElementById('art-modal').addEventListener('click', function(e) { if(e.target===this) closeArtModal(); });
-
-
-
-// ─── COMMISSION ──────────────────────────
-function sendCommissionWhatsApp() {
-    const name   = document.getElementById('comm-name').value.trim() || 'A visitor';
-    const style  = document.getElementById('comm-style').value;
-    const format = document.getElementById('comm-format').value;
-    const size   = document.getElementById('comm-size').value;
-    const notes  = document.getElementById('comm-notes').value.trim();
-    const msg = 'Hello Preeti! I would like to commission a custom painting.\n\nName: ' + name + '\nStyle: ' + style + '\nFormat: ' + format + '\nSize: ' + size + '\nNotes: ' + (notes||'N/A');
-    window.open('https://wa.me/4917632610142?text=' + encodeURIComponent(msg), '_blank');
-}
-
-// ─── MOBILE MENU ─────────────────────────
-document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-});
-document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
-});
-
-// ─── SMOOTH SCROLL REVEALS & ANCHORS ─────
-function initScrollAnimations() {
-    if (!('IntersectionObserver' in window)) {
-        document.querySelectorAll('.reveal-init').forEach(el => el.classList.add('reveal-visible'));
-        return;
-    }
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('reveal-visible');
-                observer.unobserve(entry.target);
+        // ─── HASH ROUTING ───────────────────────
+        function checkAdminHash() {
+            if (window.location.hash === '#admin') {
+                document.getElementById('admin-panel').classList.add('visible');
+                document.body.style.overflow = 'hidden';
+                checkAdminSession();
+            }
+        }
+        window.addEventListener('hashchange', () => {
+            if (window.location.hash === '#admin') {
+                document.getElementById('admin-panel').classList.add('visible');
+                document.body.style.overflow = 'hidden';
+                checkAdminSession();
+            } else {
+                document.getElementById('admin-panel').classList.remove('visible');
+                document.body.style.overflow = '';
             }
         });
-    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-    document.querySelectorAll('.reveal-init').forEach(el => observer.observe(el));
-}
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        if (!targetId || targetId === '#' || targetId.startsWith('#admin')) return;
-        const targetEl = document.querySelector(targetId);
-        if (targetEl) {
-            e.preventDefault();
-            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        async function checkAdminSession() {
+            if (!_sb) return showAdminLogin();
+            const { data: { session } } = await _sb.auth.getSession();
+            if (session) showAdminDashboard(session.user);
+            else showAdminLogin();
         }
-    });
-});
+        function showAdminLogin() {
+            document.getElementById('admin-login').style.display = 'flex';
+            document.getElementById('admin-dashboard').classList.remove('visible');
+        }
+        function showAdminDashboard(user) {
+            document.getElementById('admin-login').style.display = 'none';
+            document.getElementById('admin-dashboard').classList.add('visible');
+            document.getElementById('admin-user-email').textContent = user.email;
+            loadAdminArtworksList();
+            loadAdminCategoriesList();
+            populateSiteContentForm();
+        }
 
-// ─── FAQ ACCORDION ────────────────────────
-document.querySelectorAll('.faq-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        const icon    = btn.querySelector('i');
-        content.classList.toggle('hidden');
-        icon.style.transform = content.classList.contains('hidden') ? '' : 'rotate(180deg)';
-    });
-});
+        // ─── AUTH ────────────────────────────────
+        async function adminLogin() {
+            const email = document.getElementById('admin-email').value.trim();
+            const pass = document.getElementById('admin-password').value;
+            const btn = document.getElementById('admin-login-btn');
+            const err = document.getElementById('admin-login-error');
+            err.style.display = 'none';
+            if (!email || !pass) { showLoginErr(err, 'Please enter email and password.'); return; }
+            btn.disabled = true; btn.textContent = 'Signing in…';
+            const { data, error } = await _sb.auth.signInWithPassword({ email, password: pass });
+            btn.disabled = false; btn.textContent = 'Enter Studio';
+            if (error) { showLoginErr(err, error.message); return; }
+            showAdminDashboard(data.user);
+        }
+        async function adminLogout() {
+            await _sb.auth.signOut();
+            showAdminLogin();
+            document.getElementById('admin-email').value = '';
+            document.getElementById('admin-password').value = '';
+        }
+        function showLoginErr(el, msg) { el.textContent = msg; el.style.display = 'block'; }
 
-// ─── BOOT ────────────────────────────────
-appStart();
-initScrollAnimations();
-</script>
+        // ─── TOAST ───────────────────────────────
+        let _toastTimer;
+        function toast(msg, type = 'success') {
+            const t = document.getElementById('admin-toast');
+            t.textContent = msg; t.className = 'show ' + type;
+            clearTimeout(_toastTimer);
+            _toastTimer = setTimeout(() => t.className = '', 3200);
+        }
+
+        // ─── TAB NAV ─────────────────────────────
+        function showTab(tab) {
+            ['content', 'artworks', 'categories'].forEach(t => {
+                document.getElementById('tab-' + t).style.display = t === tab ? 'block' : 'none';
+                document.getElementById('tab-btn-' + t).classList.toggle('active', t === tab);
+            });
+        }
+
+        // ─── SITE SETTINGS ───────────────────────
+        const DEFAULTS = {
+            site_theme: 'light',
+            announcement_bar_text: 'Fine Art Studio • High-Res Digital Downloads & Museum-Grade Framed Prints • Worldwide Delivery',
+            hero_h1_line1: 'Transforming Canvas into Timeless Emotion',
+            hero_h1_cursive: '',
+            hero_image_url: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80',
+            hero_artwork_title: 'Whispers of Gold',
+            hero_artwork_subtitle: 'Original Acrylic & Gold Leaf on Textured Canvas',
+        };
+
+        async function loadSiteSettings() {
+            if (!_sb) return applySettings(DEFAULTS);
+            const { data, error } = await _sb.from('site_settings').select('key,value');
+            if (error || !data) return applySettings(DEFAULTS);
+            const map = {}; data.forEach(r => map[r.key] = r.value);
+            applySettings({ ...DEFAULTS, ...map });
+        }
+        function applySettings(s) {
+            if (s.site_theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+            setText('announcement-bar-text', s.announcement_bar_text);
+            setText('hero-h1-line1', s.hero_h1_line1);
+            setText('hero-h1-cursive', s.hero_h1_cursive);
+            setText('hero-artwork-title', s.hero_artwork_title);
+            setText('hero-artwork-subtitle', s.hero_artwork_subtitle);
+            const img = document.getElementById('hero-art-img');
+            if (img && s.hero_image_url) img.src = s.hero_image_url;
+        }
+        function populateSiteContentForm() {
+            setVal('sc-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            setVal('sc-announcement', getText('announcement-bar-text'));
+            setVal('sc-h1-line1', getText('hero-h1-line1'));
+            setVal('sc-h1-cursive', getText('hero-h1-cursive'));
+            setVal('sc-hero-title', getText('hero-artwork-title'));
+            setVal('sc-hero-subtitle', getText('hero-artwork-subtitle'));
+            const heroSrc = document.getElementById('hero-art-img')?.src || '';
+            setVal('sc-hero-url', heroSrc);
+            previewAdminImg('sc-hero-url', 'sc-hero-preview');
+        }
+        async function upsertSetting(key, value) {
+            await _sb.from('site_settings').upsert({ key, value }, { onConflict: 'key' });
+        }
+        async function saveSiteTheme() {
+            const val = document.getElementById('sc-theme').value;
+            await upsertSetting('site_theme', val);
+            if (val === 'dark') { document.documentElement.classList.add('dark'); }
+            else { document.documentElement.classList.remove('dark'); }
+            toast('Site theme updated!');
+        }
+        async function saveAnnouncementBar() {
+            const val = document.getElementById('sc-announcement').value.trim();
+            if (!val) return toast('Please enter text.', 'error');
+            await upsertSetting('announcement_bar_text', val);
+            setText('announcement-bar-text', val); toast('Announcement bar updated!');
+        }
+        async function saveHeroHeadline() {
+            const l1 = document.getElementById('sc-h1-line1').value.trim();
+            const lc = document.getElementById('sc-h1-cursive').value.trim();
+            await Promise.all([upsertSetting('hero_h1_line1', l1), upsertSetting('hero_h1_cursive', lc)]);
+            setText('hero-h1-line1', l1); setText('hero-h1-cursive', lc); toast('Hero headline updated!');
+        }
+        async function saveHeroArtwork() {
+            const title = document.getElementById('sc-hero-title').value.trim();
+            const subtitle = document.getElementById('sc-hero-subtitle').value.trim();
+            const url = document.getElementById('sc-hero-url').value.trim();
+            await Promise.all([upsertSetting('hero_artwork_title', title), upsertSetting('hero_artwork_subtitle', subtitle), upsertSetting('hero_image_url', url)]);
+            setText('hero-artwork-title', title); setText('hero-artwork-subtitle', subtitle);
+            const img = document.getElementById('hero-art-img');
+            if (img && url) img.src = url;
+            toast('Hero artwork updated!');
+        }
+        async function handleHeroFileUpload(input) {
+            const file = input.files[0]; if (!file) return;
+            document.getElementById('sc-hero-upload-status').textContent = 'Uploading…';
+            const result = await uploadToStorage(file);
+            if (!result || !result.url) {
+                document.getElementById('sc-hero-upload-status').textContent = 'Upload failed: ' + (result?.errorMsg || 'Check Supabase Storage bucket policies.');
+                return;
+            }
+            document.getElementById('sc-hero-url').value = result.url;
+            document.getElementById('sc-hero-upload-status').textContent = 'Uploaded successfully!';
+            previewAdminImg('sc-hero-url', 'sc-hero-preview');
+        }
+
+        // ─── CATEGORIES ──────────────────────────
+        async function loadCategories() {
+            if (!_sb) { renderFilterPills([]); return; }
+            const { data, error } = await _sb.from('categories').select('*').order('display_order');
+            _categories = error ? [] : (data || []);
+            renderFilterPills(_categories);
+        }
+        function renderFilterPills(cats) {
+            const c = document.getElementById('filter-buttons');
+            let html = '<button data-filter="all" class="gallery-filter-btn active bg-charcoal-900 text-cream px-5 py-2 rounded-full text-xs uppercase tracking-widest font-medium transition-all">All Works</button>';
+            cats.forEach(cat => {
+                html += '<button data-filter="' + cat.slug + '" class="gallery-filter-btn bg-white hover:bg-brand-100 text-charcoal-800 border border-brand-200 px-5 py-2 rounded-full text-xs uppercase tracking-widest font-medium transition-all">' + cat.label + '</button>';
+            });
+            c.innerHTML = html;
+            c.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => filterGallery(btn.dataset.filter, btn));
+            });
+        }
+        function filterGallery(filter, activeBtn) {
+            document.querySelectorAll('.gallery-filter-btn').forEach(b => {
+                b.className = 'gallery-filter-btn bg-white hover:bg-brand-100 text-charcoal-800 border border-brand-200 px-5 py-2 rounded-full text-xs uppercase tracking-widest font-medium transition-all';
+            });
+            activeBtn.className = 'gallery-filter-btn active bg-charcoal-900 text-cream px-5 py-2 rounded-full text-xs uppercase tracking-widest font-medium transition-all';
+            document.querySelectorAll('.art-card').forEach(card => {
+                card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+            });
+        }
+        async function loadAdminCategoriesList() {
+            await loadCategories();
+            renderAdminCategoriesList();
+            populateCategoryDropdown();
+        }
+        function renderAdminCategoriesList() {
+            const c = document.getElementById('categories-list');
+            if (!_categories.length) { c.innerHTML = '<p style="color:rgba(253,251,247,.35);font-size:13px;">No categories yet. Add one below.</p>'; return; }
+            c.innerHTML = _categories.map(cat => '<span class="cat-pill">' + cat.label + '<span style="color:rgba(197,164,120,.4);font-size:10px;margin-left:2px;">[' + cat.slug + ']</span><button class="cat-pill-delete" onclick="deleteCategory(\'' + cat.id + '\',\'' + cat.label.replace(/'/g, "\\'") + '\')">×</button></span>').join('');
+        }
+        function populateCategoryDropdown() {
+            const sel = document.getElementById('af-category'); if (!sel) return;
+            sel.innerHTML = _categories.map(c => '<option value="' + c.id + '" data-slug="' + c.slug + '" data-label="' + c.label.replace(/"/g, '&quot;') + '">' + c.label + '</option>').join('');
+        }
+        document.getElementById('new-cat-label').addEventListener('input', function () {
+            document.getElementById('new-cat-slug').value = slugify(this.value);
+        });
+        async function addCategory() {
+            const label = document.getElementById('new-cat-label').value.trim();
+            const slug = document.getElementById('new-cat-slug').value.trim();
+            if (!label || !slug) return toast('Please enter a category label.', 'error');
+            const maxOrder = _categories.reduce((m, c) => Math.max(m, c.display_order || 0), 0);
+            const { error } = await _sb.from('categories').insert({ label, slug, display_order: maxOrder + 1 });
+            if (error) { toast('Error: ' + error.message, 'error'); return; }
+            document.getElementById('new-cat-label').value = '';
+            document.getElementById('new-cat-slug').value = '';
+            toast('Category added!');
+            await loadAdminCategoriesList();
+            renderFilterPills(_categories);
+        }
+        async function deleteCategory(id, label) {
+            if (!confirm('Delete category "' + label + '"? Artworks using it will still exist but won\'t be filterable.')) return;
+            const { error } = await _sb.from('categories').delete().eq('id', id);
+            if (error) { toast('Error: ' + error.message, 'error'); return; }
+            toast('Category deleted.');
+            await loadAdminCategoriesList();
+            renderFilterPills(_categories);
+        }
+
+        // ─── ARTWORKS ─────────────────────────────
+        async function loadArtworks() {
+            if (!_sb) { renderGalleryCards([]); renderVizSelector([]); return; }
+            const { data, error } = await _sb.from('artworks').select('*, categories(slug,label)').order('display_order');
+            _artworks = error ? [] : (data || []);
+            renderGalleryCards(_artworks);
+            renderVizSelector(_artworks);
+        }
+        function renderGalleryCards(artworks) {
+            const grid = document.getElementById('gallery-grid');
+            if (!artworks.length) {
+                grid.innerHTML = '<div class="col-span-3 text-center py-16 text-gray-400"><i class="fa-solid fa-image text-4xl mb-4 block opacity-30"></i>No artworks yet. Add some from the admin panel.</div>';
+                return;
+            }
+            grid.innerHTML = artworks.map(a => {
+                const catSlug = (a.categories && a.categories.slug) || a.category_slug || '';
+                const catLabel = (a.categories && a.categories.label) || a.category_label || '';
+                const img = a.image_url || 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80';
+                const title = (a.title || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+                const medium = (a.medium || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+                const catLbl = catLabel.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+                const desc = (a.description || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+                const imgSafe = img.replace(/'/g, "\\'");
+                return '<div class="art-card group bg-white dark:bg-[#1a1714] rounded-2xl overflow-hidden border border-brand-200/60 dark:border-brand-500/20 shadow-md hover:shadow-2xl transition-all duration-300" data-category="' + catSlug + '">'
+                    + '<div class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-black">'
+                    + '<img src="' + img + '" alt="' + (a.title || '') + '" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">'
+                    + '<div class="absolute inset-0 bg-charcoal-900/40 dark:bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-3 p-4">'
+                    + '<button onclick="openArtModal(\'' + title + '\',\'' + catLbl + '\',\'' + medium + '\',\'' + imgSafe + '\',\'' + desc + '\')" class="bg-cream dark:bg-brand-600 text-charcoal-900 dark:text-cream text-xs font-semibold uppercase tracking-wider px-4 py-2.5 rounded-full shadow-lg hover:bg-brand-500 hover:text-white transition-all">View Details</button>'
+                    + '</div>'
+                    + '<span class="absolute top-3 left-3 bg-cream/90 dark:bg-[#0f0d0b]/90 backdrop-blur-md text-brand-800 dark:text-brand-300 text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full border border-brand-300 dark:border-brand-500/40">' + catLabel + '</span>'
+                    + '</div>'
+                    + '<div class="p-5">'
+                    + '<h3 class="font-serif text-xl text-charcoal-900 dark:text-cream group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">' + (a.title || '') + '</h3>'
+                    + '<p class="text-xs text-gray-500 dark:text-gray-400 mt-1 italic">' + (a.medium || '') + '</p>'
+                    + '<div class="mt-4 pt-3 border-t border-brand-100 dark:border-brand-500/20 flex items-center justify-between text-xs">'
+                    + '<span class="text-gray-600 dark:text-gray-300"><i class="fa-solid fa-download text-brand-500 mr-1"></i> Digital: Available</span>'
+                    + '<span class="text-gray-600 dark:text-gray-300"><i class="fa-solid fa-image text-brand-500 mr-1"></i> Framed: 3 Sizes</span>'
+                    + '</div>'
+                    + '<button onclick="openArtModal(\'' + title + '\',\'' + catLbl + '\',\'' + medium + '\',\'' + imgSafe + '\',\'' + desc + '\')" class="mt-4 w-full bg-brand-50 dark:bg-brand-900/40 hover:bg-brand-100 dark:hover:bg-brand-900/60 text-brand-800 dark:text-brand-300 font-medium py-2.5 rounded-xl text-xs uppercase tracking-widest transition-colors flex items-center justify-center space-x-2"><span>Inquire Artwork</span><i class="fa-solid fa-arrow-right text-xs"></i></button>'
+                    + '</div></div>';
+            }).join('');
+        }
+        function renderVizSelector(artworks) {
+            const sel = document.getElementById('viz-art-select'); if (!sel) return;
+            sel.innerHTML = artworks.map(a => '<option value="' + (a.image_url || '') + '">' + (a.title || '') + ' (' + ((a.categories && a.categories.label) || a.category_label || '') + ')</option>').join('');
+            updateRoomVisualizer();
+        }
+        async function loadAdminArtworksList() {
+            await loadArtworks();
+            renderAdminArtworksList();
+        }
+        function renderAdminArtworksList() {
+            const c = document.getElementById('artworks-list');
+            if (!_artworks.length) { c.innerHTML = '<p style="text-align:center;color:rgba(253,251,247,.3);font-size:13px;padding:24px;">No artworks yet. Click "Add New Artwork" above.</p>'; return; }
+            c.innerHTML = _artworks.map(a => {
+                const aJson = JSON.stringify(a).replace(/"/g, '&quot;');
+                return '<div class="artwork-list-item">'
+                    + '<img src="' + (a.image_url || '') + '" alt="' + (a.title || '') + '" class="artwork-list-thumb" onerror="this.style.visibility=\'hidden\'">'
+                    + '<div class="artwork-list-info"><div class="artwork-list-title">' + (a.title || '') + '</div><div class="artwork-list-meta">' + (a.medium || '') + ((a.categories && a.categories.label) ? ' • ' + a.categories.label : '') + '</div></div>'
+                    + '<div class="artwork-list-actions"><button class="admin-btn-sm admin-btn-edit" onclick="openEditArtworkForm(' + aJson + ')">Edit</button></div>'
+                    + '</div>';
+            }).join('');
+        }
+        function showAddArtworkForm() {
+            document.getElementById('artwork-form-title').textContent = 'Add New Artwork';
+            document.getElementById('af-id').value = '';
+            document.getElementById('af-title').value = '';
+            document.getElementById('af-medium').value = '';
+            document.getElementById('af-description').value = '';
+            document.getElementById('af-image-url').value = '';
+            document.getElementById('af-order').value = _artworks.length + 1;
+            const prev = document.getElementById('af-img-preview');
+            prev.src = ''; prev.classList.remove('visible');
+            document.getElementById('af-delete-btn').style.display = 'none';
+            document.getElementById('af-upload-status').textContent = '';
+            populateCategoryDropdown();
+            document.getElementById('artwork-form-wrapper').style.display = 'block';
+            document.getElementById('artwork-form-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        function openEditArtworkForm(a) {
+            document.getElementById('artwork-form-title').textContent = 'Edit Artwork';
+            document.getElementById('af-id').value = a.id;
+            document.getElementById('af-title').value = a.title || '';
+            document.getElementById('af-medium').value = a.medium || '';
+            document.getElementById('af-description').value = a.description || '';
+            document.getElementById('af-image-url').value = a.image_url || '';
+            document.getElementById('af-order').value = a.display_order || 1;
+            document.getElementById('af-upload-status').textContent = '';
+            populateCategoryDropdown();
+            const sel = document.getElementById('af-category');
+            if (sel && a.category_id) sel.value = a.category_id;
+            previewAdminImg('af-image-url', 'af-img-preview');
+            document.getElementById('af-delete-btn').style.display = 'inline-flex';
+            document.getElementById('artwork-form-wrapper').style.display = 'block';
+            document.getElementById('artwork-form-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        function hideArtworkForm() { document.getElementById('artwork-form-wrapper').style.display = 'none'; }
+        async function saveArtworkForm() {
+            const id = document.getElementById('af-id').value;
+            const title = document.getElementById('af-title').value.trim();
+            const medium = document.getElementById('af-medium').value.trim();
+            const description = document.getElementById('af-description').value.trim();
+            const image_url = document.getElementById('af-image-url').value.trim();
+            const order = parseInt(document.getElementById('af-order').value) || 1;
+            const catSel = document.getElementById('af-category');
+            const category_id = catSel.value;
+            const opt = catSel.options[catSel.selectedIndex];
+            const category_slug = opt ? opt.dataset.slug : '';
+            const category_label = opt ? opt.dataset.label : '';
+            if (!title) { toast('Title is required.', 'error'); return; }
+            if (!image_url) { toast('Please add an image URL or upload a file.', 'error'); return; }
+            const payload = { title, medium, description, image_url, category_id, category_slug, category_label, display_order: order };
+            let error;
+            if (id) ({ error } = await _sb.from('artworks').update(payload).eq('id', id));
+            else ({ error } = await _sb.from('artworks').insert(payload));
+            if (error) { toast('Error: ' + error.message, 'error'); return; }
+            toast(id ? 'Artwork updated!' : 'Artwork added!');
+            hideArtworkForm();
+            await loadAdminArtworksList();
+            renderGalleryCards(_artworks);
+            renderVizSelector(_artworks);
+        }
+        async function deleteArtworkFromForm() {
+            const id = document.getElementById('af-id').value;
+            const title = document.getElementById('af-title').value;
+            if (!id) return;
+            if (!confirm('Delete "' + title + '"? This cannot be undone.')) return;
+            const { error } = await _sb.from('artworks').delete().eq('id', id);
+            if (error) { toast('Error: ' + error.message, 'error'); return; }
+            toast('Artwork deleted.');
+            hideArtworkForm();
+            await loadAdminArtworksList();
+            renderGalleryCards(_artworks);
+            renderVizSelector(_artworks);
+        }
+        async function handleArtworkFileUpload(input) {
+            const file = input.files[0]; if (!file) return;
+            document.getElementById('af-upload-status').textContent = 'Uploading…';
+            const result = await uploadToStorage(file);
+            if (!result || !result.url) {
+                document.getElementById('af-upload-status').textContent = 'Upload failed: ' + (result?.errorMsg || 'Check Supabase Storage bucket policies.');
+                return;
+            }
+            document.getElementById('af-image-url').value = result.url;
+            document.getElementById('af-upload-status').textContent = 'Uploaded!';
+            previewAdminImg('af-image-url', 'af-img-preview');
+        }
+
+        // ─── STORAGE UPLOAD ──────────────────────
+        async function uploadToStorage(file) {
+            try {
+                const ext = file.name.split('.').pop();
+                const filename = 'artwork-' + Date.now() + '-' + Math.random().toString(36).slice(2) + '.' + ext;
+                const { data, error } = await _sb.storage.from('artwork-images').upload(filename, file, { upsert: false });
+                if (error) {
+                    console.error('Storage upload error:', error);
+                    return { url: null, errorMsg: error.message || JSON.stringify(error) };
+                }
+                const { data: urlData } = _sb.storage.from('artwork-images').getPublicUrl(data.path);
+                return { url: urlData.publicUrl, errorMsg: null };
+            } catch (e) {
+                console.error('Storage upload exception:', e);
+                return { url: null, errorMsg: e.message || 'Unknown error' };
+            }
+        }
+
+        // ─── HELPERS ─────────────────────────────
+        function setText(id, val) { const el = document.getElementById(id); if (el && val) el.textContent = val; }
+        function getText(id) { const el = document.getElementById(id); return el ? el.textContent : ''; }
+        function setVal(id, val) { const el = document.getElementById(id); if (el) el.value = val || ''; }
+        function previewAdminImg(inputId, previewId) {
+            const url = document.getElementById(inputId)?.value.trim();
+            const img = document.getElementById(previewId); if (!img) return;
+            if (url) { img.src = url; img.classList.add('visible'); }
+            else { img.src = ''; img.classList.remove('visible'); }
+        }
+        function slugify(str) {
+            return str.toLowerCase().trim()
+                .replace(/[&]/g, 'and').replace(/[^a-z0-9\s-]/g, '')
+                .replace(/[\s]+/g, '-').replace(/-+/g, '-');
+        }
+
+        // ─── MODAL ───────────────────────────────
+        function openArtModal(title, category, medium, imgUrl, description) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-category').textContent = category;
+            document.getElementById('modal-medium').textContent = medium;
+            document.getElementById('modal-img').src = imgUrl;
+            document.getElementById('modal-img').alt = title;
+            document.getElementById('modal-description').textContent = description;
+            const msg = encodeURIComponent('Hello Preeti! I am interested in "' + title + '" (' + medium + '). Could you share availability and pricing?');
+            document.getElementById('modal-wa-btn').href = 'https://wa.me/4917632610142?text=' + msg;
+            const m = document.getElementById('art-modal');
+            m.classList.remove('hidden'); m.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeArtModal() {
+            const m = document.getElementById('art-modal');
+            m.classList.add('hidden'); m.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('art-modal').addEventListener('click', function (e) { if (e.target === this) closeArtModal(); });
+
+
+
+        // ─── COMMISSION ──────────────────────────
+        function sendCommissionWhatsApp() {
+            const name = document.getElementById('comm-name').value.trim() || 'A visitor';
+            const style = document.getElementById('comm-style').value;
+            const format = document.getElementById('comm-format').value;
+            const size = document.getElementById('comm-size').value;
+            const notes = document.getElementById('comm-notes').value.trim();
+            const msg = 'Hello Preeti! I would like to commission a custom painting.\n\nName: ' + name + '\nStyle: ' + style + '\nFormat: ' + format + '\nSize: ' + size + '\nNotes: ' + (notes || 'N/A');
+            window.open('https://wa.me/4917632610142?text=' + encodeURIComponent(msg), '_blank');
+        }
+
+        // ─── MOBILE MENU ─────────────────────────
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
+        });
+
+        // ─── SMOOTH SCROLL REVEALS & ANCHORS ─────
+        function initScrollAnimations() {
+            if (!('IntersectionObserver' in window)) {
+                document.querySelectorAll('.reveal-init').forEach(el => el.classList.add('reveal-visible'));
+                return;
+            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+            document.querySelectorAll('.reveal-init').forEach(el => observer.observe(el));
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (!targetId || targetId === '#' || targetId.startsWith('#admin')) return;
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ─── FAQ ACCORDION ────────────────────────
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? '' : 'rotate(180deg)';
+            });
+        });
+
+        // ─── BOOT ────────────────────────────────
+        appStart();
+        initScrollAnimations();
+    </script>
 </body>
+
 </html>
